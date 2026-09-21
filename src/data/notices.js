@@ -5,6 +5,7 @@ export const notices = {
     warranty: [
       '包官方渠道正价代充，提供全网少有的30天全程质保服务。带质保是因为即使是官方直充，也存在掉订阅风险',
       '只质保掉订阅，掉订阅按剩余天数退款，不质保封号，因为账号来源、IP和使用内容方面会受到官方严格风控，封号纯属个人原因',
+      '常见封号原因：购买的帐号、帐号共享、频繁更换IP、问一些敏感问题、翻译敏感话术、充值过低价渠道、账号反代等等',
     ],
     notes: [
       '禁止使用 outlook 和 hotmail 邮箱充值',
@@ -23,6 +24,7 @@ export const notices = {
     warranty: [
       '包官方渠道正價代充，提供全網少有的30天全程質保服務。帶質保是因為即使是官方直充，也存在掉訂閱風險',
       '只質保掉訂閱，掉訂閱按剩餘天數退款，不質保封號，因為帳號來源、IP和使用內容方面會受到官方嚴格風控，封號純屬個人原因',
+      '常見封號原因：購買的帳號、帳號共享、頻繁更換IP、問一些敏感問題、翻譯敏感話術、充值過低價渠道、帳號反代等等',
     ],
     notes: [
       '禁止使用 outlook 和 hotmail 信箱充值',
@@ -41,6 +43,7 @@ export const notices = {
     warranty: [
       'Official-channel paid top-up with a 30-day subscription warranty. Warranty exists because even official top-up can still drop.',
       'Only dropped subscriptions are covered, refunded by remaining days. Account bans are not covered. Bans usually come from account source, IP, or usage, and are the user’s responsibility.',
+      'Common ban reasons: bought accounts, account sharing, frequent IP changes, sensitive questions, translating sensitive phrasing, topping up via cheap channels, account reverse proxies, and similar.',
     ],
     notes: [
       'Do not top up with Outlook or Hotmail.',

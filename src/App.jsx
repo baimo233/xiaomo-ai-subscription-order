@@ -12,7 +12,6 @@ import OrdersPage from './pages/OrdersPage.jsx'
 import PrivacyPage from './pages/PrivacyPage.jsx'
 import ProductDetailPage from './pages/ProductDetailPage.jsx'
 import ProductsPage from './pages/ProductsPage.jsx'
-import RedeemPage from './pages/RedeemPage.jsx'
 import TermsPage from './pages/TermsPage.jsx'
 
 export default function App() {
@@ -41,7 +40,6 @@ export default function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/order/:orderId" element={<OrderSuccessPage />} />
         <Route path="/orders" element={<OrdersPage />} />
-        <Route path="/redeem" element={<RedeemPage />} />
         <Route path="/notice" element={<NoticePage />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/privacy" element={<PrivacyPage />} />

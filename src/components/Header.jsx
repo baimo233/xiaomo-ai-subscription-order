@@ -10,7 +10,6 @@ import {
   IconHome,
   IconMoon,
   IconSun,
-  IconTicket,
   IconUser,
 } from './Icons.jsx'
 
@@ -70,10 +69,6 @@ export default function Header() {
           <NavLink to="/orders" className={navClass(pathname.startsWith('/orders'))}>
             <IconHistory className="h-3.5 w-3.5" />
             {t('orderHistory')}
-          </NavLink>
-          <NavLink to="/redeem" className={navClass(pathname.startsWith('/redeem'))}>
-            <IconTicket className="h-3.5 w-3.5" />
-            {t('redeemHistory')}
           </NavLink>
         </nav>
 
