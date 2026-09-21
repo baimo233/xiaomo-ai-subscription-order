@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig(({ command }) => ({
   plugins: [react(), tailwindcss()],
-  base: command === 'build' ? '/ai-subscription-order/' : '/',
+  base: command === 'build' ? '/xiaomo-ai-subscription-order/' : '/',
   server: {
     host: '127.0.0.1',
     port: 5173,
