@@ -30,9 +30,11 @@ export default function ProductsPage() {
 
   return (
     <div>
-      <div className="mb-12 mt-4 text-center">
-        <h1 className="mb-4 text-4xl font-black tracking-tight md:text-5xl">{t('productsCenter')}</h1>
-        <p className="mx-auto max-w-2xl border-b border-line/80 pb-8 text-lg text-muted">
+      <div className="mb-8 mt-2 text-center sm:mb-12 sm:mt-4">
+        <h1 className="mb-3 text-3xl font-black tracking-tight sm:mb-4 sm:text-4xl md:text-5xl">
+          {t('productsCenter')}
+        </h1>
+        <p className="mx-auto max-w-2xl border-b border-line/80 pb-6 text-base text-muted sm:pb-8 sm:text-lg">
           {t('browseProducts')}
         </p>
       </div>
@@ -46,7 +48,7 @@ export default function ProductsPage() {
         />
         <div className="min-w-0 flex-1">
           {filtered.length ? (
-            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
               {filtered.map((product, index) => (
                 <ProductCard key={product.id} product={product} delay={index * 50} />
               ))}

@@ -33,16 +33,16 @@ export function ProductCardSkeleton() {
 export function HomePageSkeleton() {
   const { t } = useSettings()
   return (
-    <section className="pt-8 md:pt-12" aria-busy="true" aria-live="polite">
+    <section className="pt-4 md:pt-12" aria-busy="true" aria-live="polite">
       <span className="sr-only">{t('loadingFeatured')}</span>
-      <div className="mb-8 flex items-end justify-between gap-4">
+      <div className="mb-6 flex flex-col gap-3 sm:mb-8 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <Bone className="mb-3 h-10 w-36 rounded-xl md:h-12 md:w-44" />
-          <Bone className="h-4 w-64 rounded" />
+          <Bone className="mb-3 h-8 w-32 rounded-xl sm:h-10 sm:w-36 md:h-12 md:w-44" />
+          <Bone className="h-4 w-48 rounded sm:w-64" />
         </div>
-        <Bone className="h-4 w-24 rounded" />
+        <Bone className="h-4 w-20 rounded" />
       </div>
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
         {Array.from({ length: 4 }, (_, index) => (
           <ProductCardSkeleton key={index} />
         ))}
@@ -56,10 +56,10 @@ export function ProductsPageSkeleton() {
   return (
     <div aria-busy="true" aria-live="polite">
       <span className="sr-only">{t('loadingProducts')}</span>
-      <div className="mb-12 mt-4 flex flex-col items-center">
-        <Bone className="mb-4 h-12 w-44 rounded-xl md:h-14 md:w-52" />
-        <Bone className="h-5 w-56 rounded" />
-        <div className="mt-8 w-full max-w-2xl border-b border-line/80" />
+      <div className="mb-8 mt-2 flex flex-col items-center sm:mb-12 sm:mt-4">
+        <Bone className="mb-3 h-9 w-36 rounded-xl sm:mb-4 sm:h-12 sm:w-44 md:h-14 md:w-52" />
+        <Bone className="h-4 w-40 rounded sm:h-5 sm:w-56" />
+        <div className="mt-6 w-full max-w-2xl border-b border-line/80 sm:mt-8" />
       </div>
       <div className="flex flex-col gap-8 lg:flex-row">
         <aside className="h-fit w-full rounded-2xl bg-card p-4 shadow-sm lg:sticky lg:top-24 lg:w-[240px]">
@@ -69,7 +69,7 @@ export function ProductsPageSkeleton() {
           <Bone className="mb-1.5 h-10 w-full rounded-xl" />
           <Bone className="h-10 w-full rounded-xl" />
         </aside>
-        <div className="grid min-w-0 flex-1 grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        <div className="grid min-w-0 flex-1 grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3 lg:gap-6">
           {Array.from({ length: 4 }, (_, index) => (
             <ProductCardSkeleton key={index} />
           ))}

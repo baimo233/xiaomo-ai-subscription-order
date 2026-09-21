@@ -7,13 +7,13 @@ export default function NoticeDetail({ className = '' }) {
 
   return (
     <section className={`overflow-hidden rounded-2xl bg-card shadow-sm ${className}`}>
-      <div className="flex items-center gap-2 border-b border-line px-6 py-4 sm:px-8">
+      <div className="flex items-center gap-2 border-b border-line px-4 py-4 sm:px-8">
         <span className="h-4 w-1 rounded-full bg-brand" />
         <h2 className="text-[15px] font-semibold">{t('detailInfo')}</h2>
       </div>
 
-      <div className="space-y-5 px-6 py-6 sm:px-8">
-        <h3 className="text-[22px] leading-8 font-black tracking-tight text-ink md:text-[26px]">
+      <div className="space-y-5 px-4 py-5 sm:px-8 sm:py-6">
+        <h3 className="text-[18px] leading-7 font-black tracking-tight text-ink sm:text-[22px] sm:leading-8 md:text-[26px]">
           <span className="mr-2" aria-hidden="true">
             📢
           </span>

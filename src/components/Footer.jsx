@@ -64,7 +64,7 @@ export default function Footer() {
       <button
         type="button"
         onClick={toTop}
-        className="fixed right-5 bottom-5 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-card text-muted shadow-[0_8px_24px_-12px_rgba(0,0,0,0.35)] ring-1 ring-line hover:text-ink"
+        className="fixed right-4 bottom-20 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-card text-muted shadow-[0_8px_24px_-12px_rgba(0,0,0,0.35)] ring-1 ring-line hover:text-ink sm:right-5 sm:bottom-5"
         aria-label={t('backToTop')}
       >
         <IconArrowUp />
