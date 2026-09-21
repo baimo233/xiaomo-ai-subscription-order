@@ -182,7 +182,6 @@ export default function CheckoutPage() {
             {t('submitOrder')}
           </button>
           <p className="mt-3 text-[12px] leading-5 text-muted">{t('checkoutHint')}</p>
-          <p className="mt-2 text-[12px] leading-5 text-warn">{t('paymentOnly')}</p>
         </aside>
       </form>
     </div>
