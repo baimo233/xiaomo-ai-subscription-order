@@ -659,14 +659,14 @@ html.dark[data-palette=lilac] {
   .glass-app .pass-1 { background: var(--pass-accent); }
 }
 
-/* Tiny flickering squares form a light strip beneath the mouse pointer. */
+/* Independent square sparks fade in and out around the mouse pointer. */
 :root { --aura-primary: #83b4cf; --aura-secondary: #a28acb; }
 html[data-palette=cream] { --aura-primary: #dcb785; --aura-secondary: #cc9fb8; }
 html[data-palette=sage] { --aura-primary: #86b5a2; --aura-secondary: #90abc6; }
 html[data-palette=lilac] { --aura-primary: #a895ce; --aura-secondary: #c59bbb; }
 .cursor-pixel-glow { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 90; pointer-events: none; opacity: 0; transition: opacity .18s ease; }
 .cursor-pixel-glow.is-visible { opacity: 1; }
-.cursor-pixel-glow canvas { position: absolute; top: 12px; left: -72px; width: 144px; height: 30px; pointer-events: none; }
+.cursor-pixel-glow canvas { position: absolute; top: -52px; left: -52px; width: 104px; height: 104px; pointer-events: none; }
 @media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) { .cursor-pixel-glow { display: none; } }
 .desktop-palette-menu { position: relative; }
 .desktop-palette-menu > summary { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; list-style: none; transition: background .18s,transform .18s; }
