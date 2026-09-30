@@ -6,7 +6,7 @@ export default function NoticeDetail({ className = '' }) {
   const copy = notices[locale] || notices['zh-CN']
 
   return (
-    <section className={`overflow-hidden rounded-2xl bg-card shadow-sm ${className}`}>
+    <section className={`glass-panel overflow-hidden rounded-2xl bg-card shadow-sm ${className}`}>
       <div className="flex items-center gap-2 border-b border-line px-4 py-4 sm:px-8">
         <span className="h-4 w-1 rounded-full bg-brand" />
         <h2 className="text-[15px] font-semibold">{t('detailInfo')}</h2>

@@ -114,7 +114,7 @@ export default function Header() {
               {locale.startsWith('zh') ? '中文' : 'EN'}
             </button>
             {langOpen ? (
-              <div className="absolute top-10 right-0 z-50 w-44 rounded-2xl border border-line bg-card py-3 shadow-[0_16px_40px_-18px_rgba(0,0,0,0.35)]">
+              <div className="glass-panel absolute top-10 right-0 z-50 w-44 rounded-2xl border border-line bg-card py-3 shadow-[0_16px_40px_-18px_rgba(0,0,0,0.35)]">
                 <p className="px-4 pb-2 text-[13px] text-muted">{t('language')}</p>
                 {locales.map((item) => {
                   const active = item.id === locale

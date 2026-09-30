@@ -56,7 +56,7 @@ export default function ProductsPage() {
               ))}
             </div>
           ) : (
-            <div className="rounded-2xl bg-card px-6 py-16 text-center text-muted">
+            <div className="glass-panel rounded-2xl bg-card px-6 py-16 text-center text-muted">
               {t('noProducts')}
             </div>
           )}
