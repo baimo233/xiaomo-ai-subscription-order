@@ -4,6 +4,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
 import { IconHome, IconGrid, IconHistory, IconUser, IconMenu, IconClose, IconMoon, IconSun, IconChevron } from './Icons.jsx'
+import PalettePicker from './PalettePicker.jsx'
 
 export default function MobileNavigation() {
   const { user } = useAuth()
@@ -54,6 +55,7 @@ export default function MobileNavigation() {
           <div className="sheet-heading"><div><p>XIAOMO LAB</p><h2 id="mobile-settings-title">{t('mobileSettings')}</h2></div><button type="button" onClick={close} className="sheet-close" aria-label={t('closePanel')} autoFocus><IconClose /></button></div>
           <div className="sheet-section"><h3>{t('language')}</h3><div className="sheet-languages">{locales.map(item => <button key={item.id} type="button" aria-pressed={item.id === locale} onClick={() => setLocale(item.id)}>{item.name}</button>)}</div></div>
           <div className="sheet-section"><h3>{t('theme')}</h3><button type="button" className="sheet-theme" onClick={toggleTheme} aria-pressed={theme === 'dark'}><span>{theme === 'dark' ? <IconMoon /> : <IconSun />}{t(theme === 'dark' ? 'darkAppearance' : 'lightAppearance')}</span><span className="theme-switch" aria-hidden="true"><span /></span></button></div>
+          <div className="sheet-section"><PalettePicker /></div>
           <div className="sheet-links">{[['/notice','buyNotice'],['/privacy','privacy'],['/terms','terms']].map(([to,label]) => <Link to={to} key={to} onClick={close}>{t(label)}<IconChevron /></Link>)}</div>
         </div>
       </dialog>

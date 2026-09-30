@@ -14,6 +14,7 @@ import {
 } from './Icons.jsx'
 
 import MobileNavigation from './MobileNavigation.jsx'
+import { DesktopPaletteMenu } from './PalettePicker.jsx'
 
 export default function Header() {
   const { count } = useCart()
@@ -147,6 +148,7 @@ export default function Header() {
             {theme === 'dark' ? <IconMoon /> : <IconSun />}
           </button>
 
+          <DesktopPaletteMenu />
           <MobileNavigation />
         </div>
       </div>
