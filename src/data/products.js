@@ -416,6 +416,186 @@ export const products = [
         ]
       }
     }
+  },
+  {
+    "id": "codex-250",
+    "shortName": "Codex 250点数",
+    "category": "Codex",
+    "price": 90,
+    "currency": "CNY",
+    "i18n": {
+      "zh-CN": {
+        "name": "Codex 250点数",
+        "region": "点数套餐",
+        "duration": "250 点数",
+        "description": "Codex 250点数套餐，按需选择适合你的编程额度。",
+        "notice": "下单前请确认账号要求、点数有效期及交付方式，具体使用规则以商品说明及服务商实际规则为准。",
+        "features": [
+          "250 点数",
+          "点数套餐",
+          "下单前确认账号要求"
+        ]
+      },
+      "zh-TW": {
+        "name": "Codex 250點數",
+        "region": "點數方案",
+        "duration": "250 點數",
+        "description": "Codex 250點數方案，按需選擇適合你的程式開發額度。",
+        "notice": "下單前請確認帳號要求、點數有效期及交付方式，具體使用規則以商品說明及服務商實際規則為準。",
+        "features": [
+          "250 點數",
+          "點數方案",
+          "下單前確認帳號要求"
+        ]
+      },
+      "en": {
+        "name": "Codex 250 Credits",
+        "region": "Credit pack",
+        "duration": "250 credits",
+        "description": "Codex 250-credit pack for your coding workflow.",
+        "notice": "Confirm account requirements, credit validity and delivery before ordering. Usage and eligibility follow the product description and provider rules.",
+        "features": [
+          "250 credits",
+          "Credit pack",
+          "Confirm account requirements"
+        ]
+      }
+    }
+  },
+  {
+    "id": "codex-500",
+    "shortName": "Codex 500点数",
+    "category": "Codex",
+    "price": 160,
+    "currency": "CNY",
+    "i18n": {
+      "zh-CN": {
+        "name": "Codex 500点数",
+        "region": "点数套餐",
+        "duration": "500 点数",
+        "description": "Codex 500点数套餐，按需选择适合你的编程额度。",
+        "notice": "下单前请确认账号要求、点数有效期及交付方式，具体使用规则以商品说明及服务商实际规则为准。",
+        "features": [
+          "500 点数",
+          "点数套餐",
+          "下单前确认账号要求"
+        ]
+      },
+      "zh-TW": {
+        "name": "Codex 500點數",
+        "region": "點數方案",
+        "duration": "500 點數",
+        "description": "Codex 500點數方案，按需選擇適合你的程式開發額度。",
+        "notice": "下單前請確認帳號要求、點數有效期及交付方式，具體使用規則以商品說明及服務商實際規則為準。",
+        "features": [
+          "500 點數",
+          "點數方案",
+          "下單前確認帳號要求"
+        ]
+      },
+      "en": {
+        "name": "Codex 500 Credits",
+        "region": "Credit pack",
+        "duration": "500 credits",
+        "description": "Codex 500-credit pack for your coding workflow.",
+        "notice": "Confirm account requirements, credit validity and delivery before ordering. Usage and eligibility follow the product description and provider rules.",
+        "features": [
+          "500 credits",
+          "Credit pack",
+          "Confirm account requirements"
+        ]
+      }
+    }
+  },
+  {
+    "id": "codex-1000",
+    "shortName": "Codex 1000点数",
+    "category": "Codex",
+    "price": 299,
+    "currency": "CNY",
+    "i18n": {
+      "zh-CN": {
+        "name": "Codex 1000点数",
+        "region": "点数套餐",
+        "duration": "1000 点数",
+        "description": "Codex 1000点数套餐，按需选择适合你的编程额度。",
+        "notice": "下单前请确认账号要求、点数有效期及交付方式，具体使用规则以商品说明及服务商实际规则为准。",
+        "features": [
+          "1000 点数",
+          "点数套餐",
+          "下单前确认账号要求"
+        ]
+      },
+      "zh-TW": {
+        "name": "Codex 1000點數",
+        "region": "點數方案",
+        "duration": "1000 點數",
+        "description": "Codex 1000點數方案，按需選擇適合你的程式開發額度。",
+        "notice": "下單前請確認帳號要求、點數有效期及交付方式，具體使用規則以商品說明及服務商實際規則為準。",
+        "features": [
+          "1000 點數",
+          "點數方案",
+          "下單前確認帳號要求"
+        ]
+      },
+      "en": {
+        "name": "Codex 1000 Credits",
+        "region": "Credit pack",
+        "duration": "1000 credits",
+        "description": "Codex 1000-credit pack for your coding workflow.",
+        "notice": "Confirm account requirements, credit validity and delivery before ordering. Usage and eligibility follow the product description and provider rules.",
+        "features": [
+          "1000 credits",
+          "Credit pack",
+          "Confirm account requirements"
+        ]
+      }
+    }
+  },
+  {
+    "id": "codex-2500",
+    "shortName": "Codex 2500点数",
+    "category": "Codex",
+    "price": 699,
+    "currency": "CNY",
+    "i18n": {
+      "zh-CN": {
+        "name": "Codex 2500点数",
+        "region": "点数套餐",
+        "duration": "2500 点数",
+        "description": "Codex 2500点数套餐，按需选择适合你的编程额度。",
+        "notice": "下单前请确认账号要求、点数有效期及交付方式，具体使用规则以商品说明及服务商实际规则为准。",
+        "features": [
+          "2500 点数",
+          "点数套餐",
+          "下单前确认账号要求"
+        ]
+      },
+      "zh-TW": {
+        "name": "Codex 2500點數",
+        "region": "點數方案",
+        "duration": "2500 點數",
+        "description": "Codex 2500點數方案，按需選擇適合你的程式開發額度。",
+        "notice": "下單前請確認帳號要求、點數有效期及交付方式，具體使用規則以商品說明及服務商實際規則為準。",
+        "features": [
+          "2500 點數",
+          "點數方案",
+          "下單前確認帳號要求"
+        ]
+      },
+      "en": {
+        "name": "Codex 2500 Credits",
+        "region": "Credit pack",
+        "duration": "2500 credits",
+        "description": "Codex 2500-credit pack for your coding workflow.",
+        "notice": "Confirm account requirements, credit validity and delivery before ordering. Usage and eligibility follow the product description and provider rules.",
+        "features": [
+          "2500 credits",
+          "Credit pack",
+          "Confirm account requirements"
+        ]
+      }
+    }
   }
 ]
 

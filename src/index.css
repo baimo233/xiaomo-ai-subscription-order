@@ -278,7 +278,7 @@ html.dark .primary-action { background: #417fc9; }
 .hero-stage, .stage-chatgpt, .stage-gemini { --stage-accent: #d5d9df; --stage-glow: #ffffff12; background: #172333; }
 html.dark .cover-chatgpt, html.dark .cover-claude, html.dark .cover-gemini { background: #f7f7f8; color: #52525b; }
 .shop-card:hover .cover-mark { transform: none; }
-.cover-chatgpt .cover-mark { width: 104px; height: 104px; margin: 32px; }
+.cover-chatgpt .cover-mark, .cover-codex .cover-mark { width: 104px; height: 104px; margin: 32px; }
 
 /* Mobile navigation: persistent destinations and a separate preferences sheet. */
 .mobile-tabbar { display: none; }

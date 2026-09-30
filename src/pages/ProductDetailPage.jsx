@@ -150,7 +150,7 @@ export default function ProductDetailPage() {
           </ul>
       </section>
 
-      {product.category === 'ChatGPT' && available ? <NoticeDetail className="mt-5" /> : <section className="mt-5 rounded-2xl bg-card p-6"><h2 className="font-semibold">{t('buyNotice')}</h2><p className="my-3 text-sm leading-7 text-muted">{copy.notice}</p><a href={product.category === 'ChatGPT' ? 'https://chatgpt.com/pricing' : product.category === 'Claude' ? 'https://www.anthropic.com/pricing' : product.category === 'X-Twitter' ? 'https://help.x.com/en/using-x/x-premium' : 'https://one.google.com/about/google-ai-plans/'} target="_blank" rel="noreferrer" className="text-sm text-brand">{product.category} · {t('officialPlan')} ↗</a></section>}
+      {product.category === 'ChatGPT' && available ? <NoticeDetail className="mt-5" /> : <section className="mt-5 rounded-2xl bg-card p-6"><h2 className="font-semibold">{t('buyNotice')}</h2><p className="my-3 text-sm leading-7 text-muted">{copy.notice}</p><a href={product.category === 'ChatGPT' ? 'https://chatgpt.com/pricing' : product.category === 'Codex' ? 'https://openai.com/codex/' : product.category === 'Claude' ? 'https://www.anthropic.com/pricing' : product.category === 'X-Twitter' ? 'https://help.x.com/en/using-x/x-premium' : 'https://one.google.com/about/google-ai-plans/'} target="_blank" rel="noreferrer" className="text-sm text-brand">{product.category} · {t('officialPlan')} ↗</a></section>}
     </div>
   )
 }

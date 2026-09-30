@@ -4,6 +4,7 @@ import { useSettings } from '../context/SettingsContext.jsx'
 const CATEGORIES = [
   { id: 'all', labelKey: 'allProducts' },
   { id: 'ChatGPT', label: 'ChatGPT' },
+  { id: 'Codex', label: 'Codex' },
   { id: 'Claude', label: 'Claude' },
   { id: 'Gemini', label: 'Gemini' },
   { id: 'X-Twitter', label: 'X-Twitter' },
