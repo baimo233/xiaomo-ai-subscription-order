@@ -11,7 +11,7 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative mt-8 bg-card">
+    <footer className="site-footer relative mt-8 bg-card">
       <div className="mx-auto grid w-full max-w-[1280px] gap-10 px-4 py-14 sm:px-6 md:grid-cols-3">
         <div>
           <div className="flex items-center">
@@ -64,7 +64,7 @@ export default function Footer() {
       <button
         type="button"
         onClick={toTop}
-        className="fixed right-4 bottom-20 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-card text-muted shadow-[0_8px_24px_-12px_rgba(0,0,0,0.35)] ring-1 ring-line hover:text-ink sm:right-5 sm:bottom-5"
+        className="mobile-backtop fixed right-4 bottom-20 z-30 flex h-10 w-10 items-center justify-center rounded-full bg-card text-muted shadow-[0_8px_24px_-12px_rgba(0,0,0,0.35)] ring-1 ring-line hover:text-ink sm:right-5 sm:bottom-5"
         aria-label={t('backToTop')}
       >
         <IconArrowUp />
