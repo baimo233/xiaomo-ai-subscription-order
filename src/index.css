@@ -659,25 +659,12 @@ html.dark[data-palette=lilac] {
   .glass-app .pass-1 { background: var(--pass-accent); }
 }
 
-/* Feathered light surrounds the pointer, with no outline or particle trail. */
-:root { --aura-primary: #65b5dd; --aura-secondary: #b8a4df; }
-html[data-palette=cream] { --aura-primary: #e8b97c; --aura-secondary: #eab5bf; }
-html[data-palette=sage] { --aura-primary: #8acbb1; --aura-secondary: #9bbfe0; }
-html[data-palette=lilac] { --aura-primary: #b9a0df; --aura-secondary: #e8b0cb; }
-.pointer-glow { position: fixed; top: 0; left: 0; width: 0; height: 0; z-index: 90; pointer-events: none; opacity: 0; transition: opacity .25s ease; }
-.pointer-glow.is-visible { opacity: 1; }
-.pointer-glow::before {
-  content: ''; position: absolute; width: 144px; height: 144px;
-  transform: translate(-50%,-50%); border-radius: 50%; filter: blur(14px);
-  background:
-    radial-gradient(circle at 45% 42%,#ffffff55 0%,#ffffff18 22%,transparent 50%),
-    radial-gradient(circle at 42% 46%,color-mix(in srgb,var(--aura-primary) 38%,transparent) 0%,color-mix(in srgb,var(--aura-primary) 22%,transparent) 24%,color-mix(in srgb,var(--aura-primary) 7%,transparent) 48%,transparent 70%),
-    radial-gradient(circle at 60% 58%,color-mix(in srgb,var(--aura-secondary) 24%,transparent) 0%,color-mix(in srgb,var(--aura-secondary) 12%,transparent) 28%,transparent 66%);
-  transition: transform .25s ease;
-}
-.pointer-glow.is-interactive::before { transform: translate(-50%,-50%) scale(1.1); }
-.pointer-glow.is-pressed::before { transform: translate(-50%,-50%) scale(.9); }
-@media (hover: none), (pointer: coarse), (prefers-reduced-motion: reduce) { .pointer-glow { display: none; } }
+/* A narrow pixel light band sits below the content and mobile navigation. */
+:root { --aura-primary: #83b4cf; --aura-secondary: #a28acb; }
+html[data-palette=cream] { --aura-primary: #dcb785; --aura-secondary: #cc9fb8; }
+html[data-palette=sage] { --aura-primary: #86b5a2; --aura-secondary: #90abc6; }
+html[data-palette=lilac] { --aura-primary: #a895ce; --aura-secondary: #c59bbb; }
+.bottom-particle-glow { position: fixed; inset: auto 0 0; width: 100%; height: 36px; z-index: 40; pointer-events: none; }
 .desktop-palette-menu { position: relative; }
 .desktop-palette-menu > summary { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; list-style: none; transition: background .18s,transform .18s; }
 .desktop-palette-menu > summary::-webkit-details-marker { display: none; }
