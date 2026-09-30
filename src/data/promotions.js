@@ -10,6 +10,22 @@ export const campaigns = [
     },
   },
   {
+    id: 'claude-membership', enabled: true, tone: 'claude', brand: 'Claude', productId: 'claude-pro', href: '/products/claude-pro',
+    i18n: {
+      'zh-CN': { tag: 'CLAUDE PRO · 月度会员', title: '从好想法，到好作品。', description: '写作、分析与代码协作，让 Claude 成为你的日常工作搭档。', action: '查看 Claude Pro' },
+      'zh-TW': { tag: 'CLAUDE PRO · 月度會員', title: '從好想法，到好作品。', description: '寫作、分析與程式碼協作，讓 Claude 成為你的日常工作夥伴。', action: '查看 Claude Pro' },
+      en: { tag: 'CLAUDE PRO · MONTHLY', title: 'Good ideas. Better work.', description: 'Writing, analysis and coding. Meet your everyday collaborator with Claude Pro.', action: 'Explore Claude Pro' },
+    },
+  },
+  {
+    id: 'gemini-membership', enabled: true, tone: 'gemini', brand: 'Gemini', productId: 'gemini-pro', href: '/products/gemini-pro',
+    i18n: {
+      'zh-CN': { tag: 'GEMINI · GOOGLE AI PRO', title: '让好奇，走得更远。', description: '探索多模态创作与研究。Google AI Pro 月度方案，售价待定。', action: '查看 Gemini 方案' },
+      'zh-TW': { tag: 'GEMINI · GOOGLE AI PRO', title: '讓好奇，走得更遠。', description: '探索多模態創作與研究。Google AI Pro 月度方案，售價待定。', action: '查看 Gemini 方案' },
+      en: { tag: 'GEMINI · GOOGLE AI PRO', title: 'Take curiosity further.', description: 'Explore multimodal creation and research. Monthly Google AI Pro plan; pricing pending.', action: 'Explore Gemini' },
+    },
+  },
+  {
     id: 'national-day-preview', enabled: true, tone: 'holiday', href: '/products',
     annual: { start: '09-30', end: '10-08' },
     i18n: {

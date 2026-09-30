@@ -428,3 +428,23 @@ html.dark .cover-chatgpt, html.dark .cover-claude, html.dark .cover-gemini { bac
   .campaign-indicators button { width: 26px; }
   .campaign-arrows { gap: 4px; }
 }
+
+/* Brand campaigns share the same carousel stage as Pro and seasonal offers. */
+.campaign-claude { background: radial-gradient(ellipse at 85% 30%,#ebe4dd 0%,transparent 60%),linear-gradient(115deg,#fcfaf7,#f1ebe5); }
+.campaign-gemini { background: radial-gradient(ellipse at 85% 25%,#d6e9f8 0%,transparent 60%),linear-gradient(115deg,#f6fbff,#e6f2ef); }
+.brand-ad-deck { position: relative; width: 330px; height: 266px; flex-shrink: 0; }
+.brand-ad-pass { position: absolute; left: 12px; top: 0; width: 248px; height: 248px; padding: 20px 24px; border-radius: 23px; background: #fffffff0; border: 1px solid white; box-shadow: 0 22px 50px -26px #40617f77; transform: rotate(-7deg); }
+.brand-ad-logo { display: block; width: 52px; height: 52px; margin: 19px auto 9px; }
+.brand-ad-pass > strong { display: block; text-align: center; font-size: 29px; font-weight: 650; letter-spacing: -.05em; }
+.brand-ad-pass > p { text-align: center; font-size: 11px; color: #738097; margin-top: 3px; }
+.brand-ad-price { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #e1e7ee; padding-top: 12px; margin-top: 18px; color: #2c4563; font: 12px ui-monospace,monospace; }
+.brand-ad-back { position: absolute; right: 0; top: 35px; width: 183px; height: 218px; border-radius: 23px; border: 1px solid #fff; background: #ffffff99; transform: rotate(13deg); display: flex; align-items: flex-end; justify-content: space-between; padding: 24px 15px; color: #748397; font-size: 10px; }
+.storefront > .campaign-board + .membership-section { padding-top: 12px; }
+@media (max-width: 639px) {
+  .brand-ad-deck { transform: scale(.58); }
+  .campaign-indicators button { width: 24px; }
+}
+@media (max-width: 359px) {
+  .campaign-indicators button { width: 20px; }
+  .campaign-position { display: none; }
+}
