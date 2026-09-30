@@ -10,8 +10,8 @@ export default function PointerAura() {
     let x = 0, y = 0, targetX = 0, targetY = 0, initialized = false
 
     function draw() {
-      x += (targetX - x) * .28
-      y += (targetY - y) * .28
+      x += (targetX - x) * .22
+      y += (targetY - y) * .22
       node.style.transform = `translate3d(${x}px,${y}px,0)`
       if (Math.abs(targetX - x) + Math.abs(targetY - y) > .2) frame = requestAnimationFrame(draw)
       else frame = 0
@@ -53,5 +53,5 @@ export default function PointerAura() {
       media.removeEventListener('change', hide)
     }
   }, [])
-  return createPortal(<div ref={ref} className="pointer-aura" aria-hidden="true"><span className="pointer-aura-ring" /></div>, document.body)
+  return createPortal(<div ref={ref} className="pointer-aura" aria-hidden="true"><span className="pointer-aura-sheen" /></div>, document.body)
 }
