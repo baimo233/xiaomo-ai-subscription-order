@@ -144,7 +144,7 @@ export const products = [
     "id": "chatgpt-pro-200",
     "shortName": "ChatGPT Pro 200额度",
     "category": "ChatGPT",
-    "price": 1200,
+    "price": 1199,
     "currency": "CNY",
     "i18n": {
       "zh-CN": {

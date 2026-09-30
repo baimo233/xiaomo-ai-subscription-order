@@ -15,7 +15,7 @@ test('Codex catalog groups variants while old IDs retain exact prices', () => {
   }
 })
 test('Pro prices are available and no longer pending', () => {
-  for (const [quota, price] of [[100,685],[200,1200],[500,3399]]) {
+  for (const [quota, price] of [[100,685],[200,1199],[500,3399]]) {
     const product = getProduct(`chatgpt-pro-${quota}`)
     assert.equal(product.price, price)
     assert.equal(isPurchasable(product), true)
