@@ -122,7 +122,7 @@ textarea {
 /* Membership storefront: ink blue, porcelain and brand-specific accents. */
 :root { --display-font: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-.site-header { position: fixed; z-index: 50; transform: none; animation: none; transition: none; background: color-mix(in srgb, var(--color-card) 84%, transparent); backdrop-filter: blur(22px); }
+.site-header { position: absolute; z-index: 50; transform: none; animation: none; transition: none; background: color-mix(in srgb, var(--color-card) 84%, transparent); backdrop-filter: blur(22px); }
 button, a { -webkit-tap-highlight-color: transparent; }
 button:not(:disabled), a { cursor: pointer; }
 button:disabled { opacity: .45; cursor: not-allowed; }
