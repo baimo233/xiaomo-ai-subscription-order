@@ -279,6 +279,54 @@ export const products = [
     }
   },
   {
+    "id": "claude-max-100",
+    "shortName": "Claude Max 100刀",
+    "category": "Claude",
+    "price": 545,
+    "currency": "CNY",
+    "i18n": {
+      "zh-CN": {
+        "name": "【成品号】Claude Max 100刀",
+        "region": "成品账号",
+        "duration": "30 天",
+        "description": "Claude Max 100刀，30天成品账号。质保掉订阅，封号不质保。",
+        "notice": "质保掉订阅，封号不质保，充值没问题封号全是自己的VPN原因【已经过完kyc，可以正常使用】。",
+        "features": [
+          "Claude Max 100刀【30天】",
+          "已经过完kyc，可以正常使用",
+          "邮箱接码地址mail.com",
+          "非礼品码那种，谷歌充值，目前最稳的货"
+        ]
+      },
+      "zh-TW": {
+        "name": "【成品號】Claude Max 100刀",
+        "region": "成品帳號",
+        "duration": "30 天",
+        "description": "Claude Max 100刀，30天成品帳號。質保掉訂閱，封號不質保。",
+        "notice": "質保掉訂閱，封號不質保，儲值沒問題封號全是自己的VPN原因【已經過完kyc，可以正常使用】。",
+        "features": [
+          "Claude Max 100刀【30天】",
+          "已經過完kyc，可以正常使用",
+          "信箱接碼地址mail.com",
+          "非禮品碼那種，Google儲值，目前最穩的貨"
+        ]
+      },
+      "en": {
+        "name": "Claude Max $100 Ready-made Account",
+        "region": "Ready-made account",
+        "duration": "30 days",
+        "description": "Claude Max $100 ready-made account for 30 days. Subscription loss is covered; account bans are not.",
+        "notice": "Subscription loss is covered; account bans are not. The listing states that top-ups are reliable and bans result from the user's VPN. KYC is already completed and the account is ready to use.",
+        "features": [
+          "Claude Max $100 plan · 30 days",
+          "KYC completed; ready to use",
+          "Email verification address: mail.com",
+          "Google top-up, not a gift code; described as the most stable stock"
+        ]
+      }
+    }
+  },
+  {
     "id": "gemini-pro",
     "shortName": "Gemini · Google AI Pro",
     "category": "Gemini",
