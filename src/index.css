@@ -458,33 +458,35 @@ html.dark .cover-chatgpt, html.dark .cover-claude, html.dark .cover-gemini { bac
 .credit-choice > span > span { font-size: 13px; color: var(--color-muted); }
 .credit-choice:focus-within { outline: 2px solid var(--color-brand); outline-offset: 2px; }
 
-/* Glass collection: translucent surfaces over a quiet, fixed color field. */
+/* Neutral glass: clear surfaces and restrained silver edges. */
 :root {
-  --glass-surface: rgba(255,255,255,.58);
-  --glass-strong: rgba(255,255,255,.82);
-  --glass-edge: rgba(255,255,255,.9);
-  --glass-shadow: 0 12px 32px -20px rgba(46,67,105,.28), inset 0 1px 0 rgba(255,255,255,.9), inset 0 -1px 0 rgba(255,255,255,.4);
-  --color-canvas: #eef2f7;
-  --color-line: #d0d8e4;
-  --color-muted: #596778;
-  --color-ink: #202733;
+  --glass-surface: rgba(255,255,255,.94);
+  --glass-strong: #ffffff;
+  --glass-edge: #dedee3;
+  --glass-shadow: 0 4px 16px -10px rgba(0,0,0,.14), inset 0 1px 0 #ffffff;
+  --cover-surface: #fafafa;
+  --color-canvas: #f5f5f7;
+  --color-line: #d9d9df;
+  --color-muted: #68686e;
+  --color-ink: #1d1d1f;
   --display-font: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;
 }
 html.dark {
-  --glass-surface: rgba(29,38,55,.72);
-  --glass-strong: rgba(38,48,65,.9);
-  --glass-edge: rgba(255,255,255,.18);
-  --glass-shadow: 0 16px 38px -20px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.12);
-  --color-canvas: #101725;
-  --color-card: #202a3b;
-  --color-soft: #2c394d;
-  --color-line: #435068;
-  --color-ink: #f2f6fc;
-  --color-muted: #b4c2d5;
+  --glass-surface: rgba(36,36,38,.96);
+  --glass-strong: #303033;
+  --glass-edge: #414145;
+  --glass-shadow: 0 4px 16px -10px #0006, inset 0 1px 0 #ffffff08;
+  --cover-surface: #29292c;
+  --color-canvas: #161618;
+  --color-card: #242426;
+  --color-soft: #303033;
+  --color-line: #414145;
+  --color-ink: #f5f5f7;
+  --color-muted: #aaaab0;
+  --color-ok: #6ccc8b;
 }
 .glass-app { position: relative; isolation: isolate; }
-.glass-wallpaper { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at 4% 18%,#d1e8ff 0,transparent 47%),radial-gradient(ellipse at 96% 9%,#e4dcfa 0,transparent 44%),radial-gradient(ellipse at 68% 88%,#dbf0ed 0,transparent 50%),linear-gradient(135deg,#f1f6fc,#edf0f7); }
-html.dark .glass-wallpaper { background: radial-gradient(ellipse at 8% 16%,#1c3554 0,transparent 45%),radial-gradient(ellipse at 95% 5%,#302845 0,transparent 44%),radial-gradient(ellipse at 65% 90%,#163d3e 0,transparent 55%),#101725; }
+.glass-wallpaper { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: var(--color-canvas); }
 .glass-app > main { padding-top: 102px; }
 .glass-app .site-header { top: 12px; left: max(20px,calc((100vw - 1240px)/2)); right: max(20px,calc((100vw - 1240px)/2)); border: 1px solid var(--glass-edge); border-radius: 22px; background: var(--glass-surface); -webkit-backdrop-filter: blur(24px) saturate(150%); backdrop-filter: blur(24px) saturate(150%); box-shadow: var(--glass-shadow); }
 .glass-app .site-header > div { height: 60px; padding-left: 18px; padding-right: 18px; }
@@ -499,9 +501,9 @@ html.dark .glass-wallpaper { background: radial-gradient(ellipse at 8% 16%,#1c35
 .glass-app .category-sidebar { padding: 18px; top: 100px; }
 .glass-app :is(input,select,textarea) { background: var(--glass-strong); border-color: color-mix(in srgb,var(--color-line) 65%,transparent); border-radius: 13px; color: var(--color-ink); }
 .glass-app :is(input,select,textarea):focus { border-color: var(--color-brand); box-shadow: 0 0 0 3px color-mix(in srgb,var(--color-brand) 12%,transparent); }
-.glass-app .product-cover, html.dark .glass-app :is(.cover-chatgpt,.cover-codex,.cover-claude,.cover-gemini) { background: radial-gradient(ellipse at 45% 30%,#ffffff52,transparent 70%),linear-gradient(145deg,#ffffff36,#d8e4f01a); color: var(--color-muted); }
-.glass-app .cover-mark { border-radius: 24px; background: white; padding: 9px; box-shadow: 0 8px 18px -10px #30486436,inset 0 1px 0 white; object-fit: contain; }
-.glass-app .cover-orbit { display: block; border-color: var(--color-line); opacity: .22; }
+.glass-app .product-cover, html.dark .glass-app :is(.cover-chatgpt,.cover-codex,.cover-claude,.cover-gemini) { background: var(--cover-surface); border-bottom: 1px solid var(--glass-edge); color: var(--color-muted); }
+.glass-app .cover-mark { border-radius: 24px; background: white; padding: 9px; box-shadow: 0 2px 8px #00000006; object-fit: contain; }
+.glass-app .cover-orbit { display: none; }
 .glass-app .cover-star { display: none; }
 .glass-app .card-buy { border-radius: 50%; width: 42px; height: 42px; background: var(--glass-strong); border-color: var(--glass-edge); box-shadow: 0 2px 6px #243b5b08; color: var(--color-ink); }
 .glass-app .card-buy:hover { background: var(--color-brand); color: white; }
@@ -512,10 +514,8 @@ html.dark .glass-wallpaper { background: radial-gradient(ellipse at 8% 16%,#1c35
 .catalog-heading { margin: 8px 0 28px; }
 .catalog-heading h1 { font-size: 32px; letter-spacing: -.05em; }
 .glass-app .campaign-board { border-radius: 32px; }
-.glass-app .campaign-panel { background: radial-gradient(ellipse at 86% 40%,#acd4f636,transparent 58%),linear-gradient(110deg,#ffffff32,#ffffff05); color: var(--color-ink); }
-.glass-app .campaign-pro { background: radial-gradient(ellipse at 80% 40%,#9cded334,transparent 62%),linear-gradient(110deg,#ffffff32,#ffffff05); }
-.glass-app .campaign-claude { background: radial-gradient(ellipse at 83% 40%,#ecd2be36,transparent 62%),linear-gradient(110deg,#ffffff32,#ffffff05); }
-.glass-app .campaign-gemini { background: radial-gradient(ellipse at 82% 42%,#bed7f447,transparent 56%),linear-gradient(110deg,#ffffff32,#ffffff05); }
+.glass-app :is(.campaign-panel,.campaign-pro,.campaign-claude,.campaign-gemini) { background: transparent; color: var(--color-ink); }
+.glass-app .campaign-orbit { display: none; }
 .glass-app .campaign-copy h2 { font-weight: 650; letter-spacing: -.055em; }
 .glass-app :is(.campaign-tag,.campaign-description,.campaign-dates,.campaign-countdown,.campaign-position,.deck-caption) { color: var(--color-muted); }
 .glass-app .campaign-cta { border-radius: 30px; padding: 0 22px; background: #0878ed; box-shadow: 0 6px 16px -8px #0071e355,inset 0 1px 0 #ffffff50; }
@@ -523,8 +523,9 @@ html.dark .glass-wallpaper { background: radial-gradient(ellipse at 8% 16%,#1c35
 .glass-app .campaign-arrows button { background: var(--glass-strong); border-color: var(--glass-edge); color: var(--color-ink); box-shadow: inset 0 1px 0 #ffffff50; }
 .glass-app .indicator-track { background: color-mix(in srgb,var(--color-muted) 18%,transparent); }
 .glass-app .indicator-progress { background: var(--color-brand); }
-.glass-app .pro-pass, .glass-app .brand-pass, .glass-app .brand-ad-pass, .glass-app .brand-ad-back { background: linear-gradient(145deg,rgba(255,255,255,.86),rgba(255,255,255,.55)); border-color: #ffffffce; -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px); box-shadow: 0 18px 42px -24px #203d6580,inset 0 1px 0 #fff; color: #1d3149; }
-.glass-app .pass-1 { background: linear-gradient(145deg,#274d65e6,#19344ee6); color: white; border-color: #ffffff50; }
+.glass-app .pro-pass, .glass-app .brand-pass, .glass-app .brand-ad-pass, .glass-app .brand-ad-back { background: #fafafa; border-color: #dedee3; box-shadow: 0 18px 32px -24px #0007,inset 0 1px 0 #fff; color: #1d1d1f; }
+.glass-app :is(.brand-ad-back,.brand-pass-back) { background: #eeeef0; }
+.glass-app .pass-1 { background: #303034; color: white; border-color: #48484c; }
 .glass-app .credit-choice { border-radius: 18px; background: var(--glass-surface); border-color: var(--color-line); }
 .glass-app .credit-choice.selected { background: color-mix(in srgb,var(--color-brand) 9%,var(--glass-strong)); border-color: var(--color-brand); box-shadow: inset 0 1px 0 #ffffff75; }
 .glass-app .site-footer { background: transparent; border-top: 1px solid var(--glass-edge); }
@@ -532,13 +533,13 @@ html.dark .glass-wallpaper { background: radial-gradient(ellipse at 8% 16%,#1c35
 .glass-app .mobile-backtop { background: var(--glass-strong); border: 1px solid var(--glass-edge); box-shadow: var(--glass-shadow); }
 .mobile-settings-trigger { background: var(--glass-strong); box-shadow: inset 0 1px 0 #ffffff60; border: 1px solid var(--glass-edge); }
 .mobile-settings-sheet { border-radius: 30px 30px 0 0; }
-.mobile-settings-sheet::backdrop { background: #1622383d; backdrop-filter: blur(7px); }
+.mobile-settings-sheet::backdrop { background: #0000003d; backdrop-filter: blur(7px); }
 .sheet-close { background: var(--glass-strong); border: 1px solid var(--glass-edge); }
 .sheet-theme { background: var(--glass-strong); border: 1px solid var(--glass-edge); }
 .sheet-languages button { background: var(--glass-strong); }
 .mobile-tabbar .mobile-tab-icon { border-radius: 15px; }
 @media (hover:hover) and (pointer:fine) {
-  .glass-app .shop-card:hover { transform: translateY(-4px); border-color: var(--glass-edge); box-shadow: 0 20px 40px -20px #304b7438,inset 0 1px 0 white; }
+  .glass-app .shop-card:hover { transform: translateY(-4px); border-color: var(--color-muted); box-shadow: 0 12px 24px -16px #0003; }
 }
 @media (max-width: 1023px) {
   .glass-app > main { padding-top: 100px; }
@@ -557,12 +558,12 @@ html.dark .glass-wallpaper { background: radial-gradient(ellipse at 8% 16%,#1c35
   .glass-app .cover-orbit { display: none; }
 }
 @supports not (backdrop-filter: blur(1px)) {
-  :root { --glass-surface: #f1f5fb; --glass-strong: #ffffff; }
-  html.dark { --glass-surface: #202a3b; --glass-strong: #2c394d; }
+  :root { --glass-surface: #ffffff; --glass-strong: #ffffff; }
+  html.dark { --glass-surface: #242426; --glass-strong: #303033; }
 }
 @media (prefers-reduced-transparency: reduce) {
-  :root { --glass-surface: #f1f5fb; --glass-strong: #ffffff; }
-  html.dark { --glass-surface: #202a3b; --glass-strong: #2c394d; }
+  :root { --glass-surface: #ffffff; --glass-strong: #ffffff; }
+  html.dark { --glass-surface: #242426; --glass-strong: #303033; }
   .glass-app .pro-pass, .glass-app .brand-pass, .glass-app .brand-ad-pass { background: #fff; }
-  .glass-app .pass-1 { background: #19344e; }
+  .glass-app .pass-1 { background: #303034; }
 }
