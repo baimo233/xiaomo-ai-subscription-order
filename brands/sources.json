@@ -16,5 +16,9 @@
     "page": "https://about.x.com/en/who-we-are/brand-toolkit",
     "asset": "https://about.x.com/content/dam/about-twitter/x/brand-toolkit/x-logo.zip",
     "note": "Unmodified official logo-black.png from the X brand toolkit archive."
+  },
+  "QQ": {
+    "page": "https://im.qq.com/index",
+    "asset": "https://static-res.qq.com/static-res/imqq/qq-logo.png"
   }
 }
