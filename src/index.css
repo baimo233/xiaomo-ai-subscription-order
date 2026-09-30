@@ -140,10 +140,9 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin-top: 30px; }
 .primary-action, .secondary-action { display: inline-flex; align-items: center; justify-content: center; gap: 18px; font-size: 13px; font-weight: 600; }
 .primary-action { min-height: 46px; border-radius: 12px; background: #253e62; color: white; padding: 0 20px; box-shadow: 0 5px 15px #183c5e20; transition: transform .25s, box-shadow .25s; }
-.primary-action:hover { transform: translateY(-3px); box-shadow: 0 10px 24px #183c5e35; }
+.primary-action:hover { filter: brightness(.95); }
 .secondary-action { color: var(--color-muted); padding: 10px 0; }
 .secondary-action span { transition: transform .25s; }
-.secondary-action:hover span { transform: translate(3px,-3px); }
 .hero-brand-row { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 43px; color: var(--color-muted); }
 .hero-brand-row > span { display: inline-flex; align-items: center; gap: 7px; font: 500 12px 'Segoe UI', sans-serif; }
 .hero-stage { --stage-accent: #d9a28c; --stage-glow: #c67b5638; position: relative; overflow: hidden; min-height: 490px; margin: 16px; margin-left: 0; border-radius: 20px; background: #162b46; color: #eef3fa; isolation: isolate; transition: background .6s; }
@@ -188,7 +187,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .reveal { height: 100%; }
 .reveal-ready { opacity: 0; transform: translateY(22px); transition: opacity .6s ease var(--reveal-delay),transform .6s cubic-bezier(.2,.65,.3,1) var(--reveal-delay); }
 .reveal-visible { opacity: 1; transform: none; }
-.shop-card { display: flex; flex-direction: column; height: 100%; border: 1px solid color-mix(in srgb,var(--color-line) 65%,transparent); background: var(--color-card); border-radius: 19px; overflow: hidden; transition: transform .35s, box-shadow .35s, border-color .35s; }
+.shop-card { display: flex; flex-direction: column; height: 100%; border: 1px solid color-mix(in srgb,var(--color-line) 65%,transparent); background: var(--color-card); border-radius: 19px; overflow: hidden; }
 .product-image-link { position: relative; display: block; overflow: hidden; }
 .product-cover { position: relative; display: flex; align-items: center; justify-content: center; height: 100%; overflow: hidden; isolation: isolate; background: #e1eee9; color: #2b7564; }
 .cover-claude { color: #ac624a; background: #f0e6de; }
@@ -196,7 +195,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .cover-label { position: absolute; top: 20px; left: 20px; font: 9px Consolas,monospace; letter-spacing: .18em; }
 .cover-plan { position: absolute; bottom: 17px; left: 20px; font: 500 12px 'Segoe UI',sans-serif; }
 .cover-star { position: absolute; bottom: 15px; right: 20px; opacity: .55; }
-.cover-mark { height: 70px; width: 70px; margin: 50px; transition: transform .65s cubic-bezier(.22,.7,.25,1); }
+.cover-mark { height: 104px; width: 104px; margin: 32px; }
 .cover-orbit { position: absolute; height: 240px; width: 240px; top: 50%; left: 50%; transform: translate(-50%,-50%); border: 1px solid currentColor; opacity: .10; border-radius: 50%; pointer-events: none; }
 .orbit-two { height: 170px; width: 320px; transform: translate(-50%,-50%) rotate(-28deg); }
 .card-image-arrow { position: absolute; right: 16px; top: 16px; display: grid; place-items: center; width: 29px; height: 29px; background: #fff9; color: #263d52; border-radius: 50%; opacity: 0; transform: translate(-4px,4px); transition: transform .3s,opacity .3s; }
@@ -204,7 +203,7 @@ button:disabled { opacity: .45; cursor: not-allowed; }
 .plan-badge.pending { color: var(--color-muted); background: var(--color-canvas); }
 .card-price { font: 600 23px/1.6 var(--display-font); letter-spacing: -.04em; font-variant-numeric: tabular-nums; }
 .card-buy { display: inline-flex; align-items: center; justify-content: center; width: 37px; height: 37px; border: 1px solid var(--color-line); border-radius: 11px; transition: background .2s,color .2s,transform .2s; }
-.card-buy:hover { background: var(--color-ink); color: var(--color-card); transform: translateY(-2px); }
+.card-buy:hover { background: var(--color-ink); color: var(--color-card); }
 .how-section { margin-top: 70px; padding-top: 35px; border-top: 1px solid var(--color-line); display: grid; grid-template-columns: 1fr 2fr; gap: 35px; }
 .how-title a { display: inline-block; font-size: 12px; color: var(--color-muted); margin-top: 15px; }
 .how-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
@@ -216,9 +215,6 @@ html.dark .cover-claude { background: #48352e; color: #dfa68d; }
 html.dark .cover-gemini { background: #2c3354; color: #b3bcf3; }
 html.dark .primary-action { background: #417fc9; }
 @media (hover:hover) and (pointer:fine) {
-  .shop-card:hover { transform: translateY(-6px); border-color: color-mix(in srgb,var(--color-brand) 30%,var(--color-line)); box-shadow: 0 18px 34px -20px #233e6266; }
-  .shop-card:hover .cover-mark { transform: scale(1.1) rotate(8deg); }
-  .shop-card:hover .card-image-arrow { opacity: 1; transform: none; }
   .hero-stage:hover .floating-membership { animation-play-state: paused; }
 }
 @keyframes hero-enter { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
@@ -277,8 +273,6 @@ html.dark .primary-action { background: #417fc9; }
 .floating-membership, .stage-chatgpt .floating-membership, .stage-gemini .floating-membership { background: #fff; }
 .hero-stage, .stage-chatgpt, .stage-gemini { --stage-accent: #d5d9df; --stage-glow: #ffffff12; background: #172333; }
 html.dark .cover-chatgpt, html.dark .cover-claude, html.dark .cover-gemini { background: #f7f7f8; color: #52525b; }
-.shop-card:hover .cover-mark { transform: none; }
-.cover-chatgpt .cover-mark, .cover-codex .cover-mark { width: 104px; height: 104px; margin: 32px; }
 
 /* Mobile navigation: persistent destinations and a separate preferences sheet. */
 .mobile-tabbar { display: none; }
@@ -349,7 +343,7 @@ html.dark .cover-chatgpt, html.dark .cover-claude, html.dark .cover-gemini { bac
 .campaign-description { max-width: 420px; color: #64748c; font-size: 13px; line-height: 1.9; }
 .campaign-action-row { display: flex; align-items: center; gap: 18px; margin-top: 22px; }
 .campaign-cta { display: inline-flex; gap: 26px; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 12px; background: #172e50; box-shadow: 0 4px 12px #172e5018; color: white; font-size: 13px; font-weight: 500; transition: background .2s,transform .2s; }
-.campaign-cta:hover { background: #254c7d; transform: translateY(-2px); }
+.campaign-cta:hover { background: #254c7d; }
 .campaign-cta > span { font-size: 20px; }
 .campaign-dates { font: 11px ui-monospace,monospace; color: #5d7394; white-space: nowrap; }
 .campaign-countdown { margin-top: 10px; font-size: 12px; color: #48638a; }
@@ -458,17 +452,20 @@ html.dark .cover-chatgpt, html.dark .cover-claude, html.dark .cover-gemini { bac
 .credit-choice > span > span { font-size: 13px; color: var(--color-muted); }
 .credit-choice:focus-within { outline: 2px solid var(--color-brand); outline-offset: 2px; }
 
-/* Neutral glass: clear surfaces and restrained silver edges. */
+/* Graphite collection: white canvas, silver cards and a dark campaign stage. */
 :root {
-  --glass-surface: rgba(255,255,255,.94);
+  --glass-surface: rgba(246,246,248,.96);
   --glass-strong: #ffffff;
   --glass-edge: #dedee3;
   --glass-shadow: 0 4px 16px -10px rgba(0,0,0,.14), inset 0 1px 0 #ffffff;
-  --cover-surface: #fafafa;
-  --color-canvas: #f5f5f7;
+  --cover-surface: #ededf0;
+  --color-canvas: #ffffff;
   --color-line: #d9d9df;
   --color-muted: #68686e;
   --color-ink: #1d1d1f;
+  --color-brand: #202022;
+  --color-brand-hover: #3a3a3d;
+  --on-accent: #ffffff;
   --display-font: -apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif;
 }
 html.dark {
@@ -484,6 +481,9 @@ html.dark {
   --color-ink: #f5f5f7;
   --color-muted: #aaaab0;
   --color-ok: #6ccc8b;
+  --color-brand: #f5f5f7;
+  --color-brand-hover: #dedee3;
+  --on-accent: #1d1d1f;
 }
 .glass-app { position: relative; isolation: isolate; }
 .glass-wallpaper { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: var(--color-canvas); }
@@ -513,16 +513,18 @@ html.dark {
 .collection-filters button[aria-pressed=true] { background: var(--glass-strong); color: var(--color-brand); box-shadow: 0 2px 8px #243b5b0d; }
 .catalog-heading { margin: 8px 0 28px; }
 .catalog-heading h1 { font-size: 32px; letter-spacing: -.05em; }
-.glass-app .campaign-board { border-radius: 32px; }
-.glass-app :is(.campaign-panel,.campaign-pro,.campaign-claude,.campaign-gemini) { background: transparent; color: var(--color-ink); }
+.glass-app .campaign-board { border-radius: 32px; background: #1d1d1f; border-color: #37373b; box-shadow: 0 6px 20px -16px #0009; }
+.glass-app :is(.campaign-panel,.campaign-pro,.campaign-claude,.campaign-gemini) { background: transparent; color: #f5f5f7; }
 .glass-app .campaign-orbit { display: none; }
 .glass-app .campaign-copy h2 { font-weight: 650; letter-spacing: -.055em; }
-.glass-app :is(.campaign-tag,.campaign-description,.campaign-dates,.campaign-countdown,.campaign-position,.deck-caption) { color: var(--color-muted); }
-.glass-app .campaign-cta { border-radius: 30px; padding: 0 22px; background: #0878ed; box-shadow: 0 6px 16px -8px #0071e355,inset 0 1px 0 #ffffff50; }
-.glass-app .campaign-cta:hover { background: #0066ce; }
-.glass-app .campaign-arrows button { background: var(--glass-strong); border-color: var(--glass-edge); color: var(--color-ink); box-shadow: inset 0 1px 0 #ffffff50; }
-.glass-app .indicator-track { background: color-mix(in srgb,var(--color-muted) 18%,transparent); }
-.glass-app .indicator-progress { background: var(--color-brand); }
+.glass-app :is(.campaign-tag,.campaign-description,.campaign-dates,.campaign-countdown,.campaign-position,.deck-caption) { color: #bcbcc3; }
+.glass-app .campaign-status-dot { background: #f5f5f7; box-shadow: none; }
+.glass-app .campaign-cta { border-radius: 30px; padding: 0 22px; background: #f5f5f7; color: #1d1d1f; box-shadow: none; }
+.glass-app .campaign-cta:hover { background: #ffffff; }
+.glass-app .campaign-arrows button { background: #303033; border-color: #505055; color: #f5f5f7; box-shadow: none; }
+.glass-app .campaign-arrows button:hover { background: #45454a; }
+.glass-app .indicator-track { background: #55555a; }
+.glass-app .indicator-progress { background: #f5f5f7; }
 .glass-app .pro-pass, .glass-app .brand-pass, .glass-app .brand-ad-pass, .glass-app .brand-ad-back { background: #fafafa; border-color: #dedee3; box-shadow: 0 18px 32px -24px #0007,inset 0 1px 0 #fff; color: #1d1d1f; }
 .glass-app :is(.brand-ad-back,.brand-pass-back) { background: #eeeef0; }
 .glass-app .pass-1 { background: #303034; color: white; border-color: #48484c; }
@@ -538,8 +540,23 @@ html.dark {
 .sheet-theme { background: var(--glass-strong); border: 1px solid var(--glass-edge); }
 .sheet-languages button { background: var(--glass-strong); }
 .mobile-tabbar .mobile-tab-icon { border-radius: 15px; }
+.glass-app .bg-brand { color: var(--on-accent); }
+.glass-app .card-buy:hover { color: var(--on-accent); }
+/* Feedback stays on interactive surfaces; carousel motion keeps its own timing. */
+.glass-app :is(button,a), .mobile-tab, .sheet-close, .sheet-theme, .sheet-languages button {
+  transition: background-color .18s ease,color .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease,opacity .18s ease;
+}
+.glass-app .shop-card { transition: transform .22s ease,box-shadow .22s ease,border-color .22s ease; }
 @media (hover:hover) and (pointer:fine) {
-  .glass-app .shop-card:hover { transform: translateY(-4px); border-color: var(--color-muted); box-shadow: 0 12px 24px -16px #0003; }
+  .glass-app .shop-card:hover { transform: translateY(-3px); border-color: var(--color-muted); box-shadow: 0 10px 20px -14px #0005; }
+  .glass-app :is(button:not(:disabled),.campaign-cta,.primary-action,.card-buy):hover { transform: translateY(-1px); }
+  .glass-app :is(button:not(:disabled),.campaign-cta,.primary-action,.card-buy):active { transform: scale(.97); }
+  .glass-app .site-header a:hover { background: var(--glass-strong); box-shadow: 0 2px 8px #0000000d; }
+  .glass-app .product-image-link:hover .cover-mark { transform: scale(1.04); }
+  .glass-app .cover-mark { transition: transform .22s ease; }
+  .glass-app .category-option:hover, .collection-filters button:hover { box-shadow: inset 0 0 0 1px var(--color-muted); }
+  .glass-app .site-footer a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .mobile-settings-trigger:hover, .mobile-tab:hover .mobile-tab-icon, .sheet-close:hover, .sheet-theme:hover, .sheet-languages button:hover { box-shadow: inset 0 0 0 1px var(--color-muted); }
 }
 @media (max-width: 1023px) {
   .glass-app > main { padding-top: 100px; }
