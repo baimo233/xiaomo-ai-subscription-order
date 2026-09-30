@@ -330,68 +330,101 @@ html.dark .cover-chatgpt, html.dark .cover-claude, html.dark .cover-gemini { bac
 }
 @media (prefers-reduced-motion: reduce) { .mobile-settings-sheet[open] { animation: none; } }
 
-/* Campaign board: a membership ticket with a quiet control rail. */
-.promotion-carousel { margin: 0 0 32px; border: 1px solid var(--color-line); border-radius: 24px; overflow: hidden; background: var(--color-card); }
-.promotion-slide { display: grid; grid-template-columns: 1.25fr 1fr; min-height: 270px; animation: campaign-in .45s ease; }
-.promotion-pro { background: #142c48; color: #f2f8ff; --campaign-accent: #b9eadc; }
-.promotion-holiday { background: #fff6dd; color: #4d3918; --campaign-accent: #795918; }
-.promotion-copy { padding: 32px 40px; }
-.promotion-tag { display: flex; gap: 8px; align-items: center; font-size: 11px; letter-spacing: .12em; font-weight: 600; color: var(--campaign-accent); }
-.promotion-tag > span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-.promotion-copy h2 { margin: 14px 0 12px; font-size: clamp(24px,3vw,38px); line-height: 1.25; letter-spacing: -.04em; font-weight: 700; }
-.promotion-description { max-width: 460px; font-size: 14px; line-height: 1.85; opacity: .75; }
-.promotion-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 44px; margin-top: 18px; border-bottom: 1px solid currentColor; color: var(--campaign-accent); font-size: 13px; font-weight: 600; }
-.promotion-cta:hover span { transform: translate(2px,-2px); }
-.promotion-cta span { transition: transform .2s; font-size: 20px; }
-.promotion-art { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 24px 40px; border-left: 1px dashed #ffffff30; overflow: hidden; }
-.promotion-brand { position: absolute; right: 36px; top: 28px; background: white; padding: 9px; border-radius: 14px; }
-.promotion-brand img { width: 30px; height: 30px; }
-.promotion-art-title { font-size: 76px; line-height: 1; letter-spacing: -.07em; font-weight: 800; color: #b9eadc; }
-.quota-tickets { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 22px; }
-.quota-tickets > div { border-top: 1px solid #ffffff44; padding-top: 12px; }
-.quota-tickets strong { display: block; font-size: 26px; letter-spacing: -.04em; }
-.quota-tickets span { font-size: 13px; color: #b9eadc; font-family: ui-monospace, monospace; }
-.promotion-holiday .promotion-art { border-color: #79591833; align-items: center; }
-.holiday-caption { font-size: 10px; letter-spacing: .24em; }
-.holiday-date { font-size: 72px; letter-spacing: -.06em; font-weight: 700; line-height: 1.5; }
-.holiday-date > span { font-weight: 300; color: #b19a66; }
-.holiday-brands { display: flex; gap: 12px; }
-.holiday-brands > span { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: white; box-shadow: 0 3px 10px #7959180c; }
-.holiday-brands img { width: 26px; height: 26px; }
-.promotion-controls { display: flex; align-items: center; justify-content: space-between; padding: 2px 20px; min-height: 48px; }
-.promotion-dots, .promotion-arrows { display: flex; align-items: center; gap: 2px; }
-.promotion-controls button { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; font-size: 17px; color: var(--color-muted); }
-.promotion-controls button:hover { background: var(--color-canvas); }
-.promotion-dots button { width: 28px; }
-.promotion-dots span { display: block; height: 5px; width: 5px; border-radius: 10px; background: var(--color-line); transition: width .2s; }
-.promotion-dots [aria-pressed=true] span { width: 20px; background: var(--color-brand); }
-.promotion-position { font: 10px ui-monospace,monospace; color: var(--color-muted); margin-right: 12px; }
-.promotion-countdown { margin-top: 10px; font-size: 12px; }
-.promotion-schedule { margin-top: 8px; font-size: 11px; opacity: .75; }
-.promotion-countdown time { font-family: ui-monospace,monospace; font-weight: 600; margin-left: 8px; }
 .offer-label { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 8px; font-size: 11px; color: var(--color-muted); margin: 8px 0; }
 .offer-label > span:first-child { background: var(--color-brand); color: white; border-radius: 5px; padding: 2px 6px; }
 .offer-label > span:last-child { color: var(--color-brand); }
-@keyframes campaign-in { from { opacity: .5; transform: translateY(5px); } to { opacity: 1; transform: none; } }
-@media (max-width: 639px) {
-  .promotion-carousel { border-radius: 20px; margin-bottom: 24px; }
-  .promotion-slide { grid-template-columns: 1fr; min-height: 300px; }
-  .promotion-copy { padding: 22px 22px 12px; }
-  .promotion-copy h2 { font-size: 27px; margin-top: 12px; }
-  .promotion-description { font-size: 12px; min-height: 44px; }
-  .promotion-cta { margin-top: 8px; }
-  .promotion-art { padding: 12px 22px 22px; border-left: 0; }
-  .promotion-art-title { display: none; }
-  .promotion-brand { display: none; }
-  .quota-tickets { margin-top: 0; }
-  .quota-tickets strong { font-size: 24px; }
-  .promotion-holiday .promotion-art { align-items: stretch; flex-direction: row; justify-content: space-between; gap: 10px; align-items: center; }
-  .holiday-caption { display: none; }
-  .holiday-date { font-size: 42px; }
-  .holiday-brands { gap: 6px; }
-  .holiday-brands > span { width: 32px; height: 32px; border-radius: 9px; }
-  .holiday-brands img { width: 21px; height: 21px; }
-  .promotion-controls { padding: 0 12px; }
-  .promotion-position { margin-right: 2px; }
+
+/* Membership campaign stage: floating passes and integrated playback controls. */
+.catalog-heading { margin: 12px 0 26px; text-align: left; }
+.catalog-heading h1 { font-size: 28px; margin-bottom: 8px; font-weight: 650; }
+.campaign-board { position: relative; isolation: isolate; margin-bottom: 32px; border-radius: 28px; overflow: hidden; background: #edf3ff; box-shadow: 0 10px 35px -24px #20488355; border: 1px solid #dfe8f5; }
+.campaign-track { display: flex; transition: transform .75s cubic-bezier(.22,.68,0,1); align-items: stretch; }
+.campaign-panel { position: relative; flex: 0 0 100%; min-width: 0; display: grid; grid-template-columns: 1.12fr 1fr; min-height: 348px; color: #172947; overflow: hidden; background: radial-gradient(ellipse at 83% 30%, #d4e5ff 0%, transparent 60%), linear-gradient(115deg,#f6f9ff,#eaf1ff); }
+.campaign-pro { background: radial-gradient(ellipse at 87% 30%,#d8eff3 0%,transparent 60%),linear-gradient(115deg,#f6fbfc,#e8f1f5); }
+.campaign-copy { position: relative; z-index: 2; padding: 40px 0 76px 44px; }
+.campaign-tag { display: inline-flex; align-items: center; gap: 8px; min-height: 26px; font-size: 11px; font-weight: 600; color: #48638a; letter-spacing: .06em; }
+.campaign-status-dot { width: 6px; height: 6px; border-radius: 50%; background: #397bee; box-shadow: 0 0 0 4px #397bee0c; }
+.campaign-copy h2 { margin: 14px 0 12px; font-size: clamp(28px,3.1vw,44px); line-height: 1.25; font-weight: 750; letter-spacing: -.04em; }
+.campaign-description { max-width: 420px; color: #64748c; font-size: 13px; line-height: 1.9; }
+.campaign-action-row { display: flex; align-items: center; gap: 18px; margin-top: 22px; }
+.campaign-cta { display: inline-flex; gap: 26px; align-items: center; min-height: 44px; padding: 0 18px; border-radius: 12px; background: #172e50; box-shadow: 0 4px 12px #172e5018; color: white; font-size: 13px; font-weight: 500; transition: background .2s,transform .2s; }
+.campaign-cta:hover { background: #254c7d; transform: translateY(-2px); }
+.campaign-cta > span { font-size: 20px; }
+.campaign-dates { font: 11px ui-monospace,monospace; color: #5d7394; white-space: nowrap; }
+.campaign-countdown { margin-top: 10px; font-size: 12px; color: #48638a; }
+.campaign-countdown time { font-family: ui-monospace,monospace; margin-left: 8px; }
+.campaign-art { position: relative; min-width: 0; display: flex; align-items: center; justify-content: center; padding-bottom: 38px; }
+.campaign-orbit { position: absolute; border: 1px solid #8eafe42b; border-radius: 50%; width: 440px; height: 440px; transform: rotateX(25deg); }
+.orbit-two { width: 340px; height: 340px; border-style: dashed; }
+.holiday-deck { position: relative; width: 330px; height: 255px; flex-shrink: 0; transform: rotate(-4deg); }
+.brand-pass { position: absolute; border: 1px solid #ffffffd9; border-radius: 22px; background: #ffffffa8; box-shadow: 0 22px 50px -28px #40699f99, inset 0 0 0 1px #ffffff88; backdrop-filter: blur(14px); }
+.brand-pass-back { width: 180px; height: 202px; right: -14px; top: 32px; transform: rotate(17deg); display: flex; align-items: flex-end; justify-content: flex-end; flex-direction: column; gap: 12px; padding: 22px; background: #edf2ffd9; }
+.brand-pass-back img { width: 38px; height: 38px; }
+.brand-pass-back > span { font-size: 12px; color: #556b8a; }
+.brand-pass-front { width: 248px; height: 218px; left: 12px; top: 6px; padding: 22px; transform: rotate(-4deg); }
+.pass-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; font: 9px ui-monospace,monospace; letter-spacing: .12em; color: #61718b; }
+.pass-top img { width: 27px; height: 27px; border-radius: 7px; background: white; }
+.brand-pass-front > strong { display: block; margin-top: 22px; font: 600 36px/1.05 Georgia,serif; letter-spacing: -.04em; color: #193558; }
+.brand-pass-front em { display: block; font-style: italic; font-weight: 400; color: #4b70a7; }
+.holiday-pass-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 24px; font: 9px ui-monospace,monospace; letter-spacing: .1em; color: #60799c; }
+.holiday-pass-bottom img { width: 27px; height: 27px; }
+.deck-caption { position: absolute; bottom: -4px; left: 42px; font-size: 10px; color: #667e9f; letter-spacing: .04em; transform: rotate(4deg); }
+.pro-deck { position: relative; width: 456px; height: 248px; flex-shrink: 0; }
+.pro-pass { position: absolute; width: 156px; height: 202px; padding: 17px; border: 1px solid #ffffff; border-radius: 20px; background: #ffffffdc; box-shadow: 0 22px 40px -25px #325d7499; }
+.pass-0 { left: 0; top: 28px; transform: rotate(-12deg); }
+.pass-1 { left: 150px; top: 5px; transform: rotate(-2deg); z-index: 2; background: #183a4c; color: white; border-color: #4c6d7c; }
+.pass-2 { left: 300px; top: 30px; transform: rotate(10deg); }
+.pro-pass > strong { display: block; font: 600 47px/1 ui-sans-serif,system-ui; letter-spacing: -.06em; margin-top: 30px; }
+.pro-pass small { display: block; font: 10px system-ui; letter-spacing: .06em; margin-top: 8px; color: #78909a; }
+.pass-bottom { margin-top: 20px; display: flex; justify-content: space-between; font: 12px ui-monospace,monospace; }
+.pass-1 .pass-top, .pass-1 small { color: #adc5d1; }
+.campaign-controls { position: absolute; inset: auto 26px 14px; display: flex; align-items: center; justify-content: space-between; gap: 12px; z-index: 3; }
+.campaign-indicators, .campaign-arrows { display: flex; align-items: center; }
+.campaign-indicators button { width: 46px; height: 44px; display: flex; align-items: center; padding: 0 4px; }
+.indicator-track { display: block; position: relative; width: 100%; height: 3px; border-radius: 5px; overflow: hidden; background: #607c9e26; }
+.indicator-progress { display: block; height: 100%; width: 100%; background: #275b98; transform-origin: left; animation: campaign-progress 5s linear forwards; }
+.campaign-arrows { gap: 6px; }
+.campaign-arrows button { display: flex; align-items: center; justify-content: center; height: 38px; width: 38px; border: 1px solid #ffffffaa; background: #ffffffa6; backdrop-filter: blur(12px); color: #3c5576; border-radius: 50%; transition: background .2s; }
+.campaign-arrows button:hover { background: white; }
+.campaign-arrows svg { width: 17px; height: 17px; }
+.campaign-position { font: 11px ui-monospace,monospace; color: #24476e; margin-right: 12px; white-space: nowrap; }
+.campaign-position > span { color: #8da0ba; }
+.campaign-board button:focus-visible, .campaign-cta:focus-visible { outline: 2px solid #397bee; outline-offset: 3px; }
+@keyframes campaign-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 900px) and (min-width: 640px) {
+  .campaign-copy { padding-left: 28px; }
+  .campaign-art { transform: scale(.8); }
+  .campaign-copy h2 { font-size: 30px; }
 }
-@media (prefers-reduced-motion: reduce) { .promotion-slide { animation: none; } }
+@media (max-width: 639px) {
+  .catalog-heading { margin: 8px 0 20px; }
+  .catalog-heading h1 { font-size: 24px; }
+  .catalog-heading p { font-size: 12px; line-height: 1.7; }
+  .campaign-board { border-radius: 22px; margin-bottom: 24px; }
+  .campaign-panel { grid-template-columns: minmax(0,1fr); grid-template-rows: auto 172px; min-height: 430px; }
+  .campaign-copy { padding: 22px 22px 0; }
+  .campaign-copy h2 { font-size: 27px; margin: 10px 0; }
+  .campaign-description { font-size: 12px; line-height: 1.8; }
+  .campaign-action-row { margin-top: 16px; gap: 12px; flex-wrap: wrap; }
+  .campaign-cta { min-height: 42px; padding: 0 14px; gap: 14px; font-size: 12px; }
+  .campaign-dates { font-size: 10px; }
+  .campaign-art { padding-bottom: 64px; align-self: center; height: 172px; }
+  .deck-caption { display: none; }
+  .campaign-orbit { width: 310px; height: 310px; opacity: .6; }
+  .orbit-two { width: 240px; height: 240px; }
+  .holiday-deck { transform: scale(.58) rotate(-4deg); }
+  .pro-deck { transform: scale(.58); }
+  .campaign-controls { inset: auto 16px 10px; }
+  .campaign-arrows button { width: 36px; height: 36px; }
+  .campaign-position { margin-right: 3px; font-size: 10px; }
+  .campaign-indicators button { width: 34px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .campaign-track { transition: none; }
+  .indicator-progress { animation: none; }
+}
+@media (max-width: 359px) {
+  .pro-deck { transform: scale(.5); }
+  .campaign-indicators button { width: 26px; }
+  .campaign-arrows { gap: 4px; }
+}

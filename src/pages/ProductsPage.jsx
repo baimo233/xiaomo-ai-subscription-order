@@ -31,11 +31,11 @@ export default function ProductsPage() {
 
   return (
     <div>
-      <div className="mb-8 mt-2 text-center sm:mb-12 sm:mt-4">
+      <div className="catalog-heading">
         <h1 className="mb-3 text-3xl font-black tracking-tight sm:mb-4 sm:text-4xl md:text-5xl">
           {t('productsCenter')}
         </h1>
-        <p className="mx-auto max-w-2xl border-b border-line/80 pb-6 text-base text-muted sm:pb-8 sm:text-lg">
+        <p className="max-w-2xl text-sm text-muted sm:text-base">
           {t('collectionDescription')}
         </p>
       </div>

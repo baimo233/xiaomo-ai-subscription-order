@@ -13,8 +13,8 @@ export const campaigns = [
     id: 'national-day-preview', enabled: true, tone: 'holiday', href: '/products',
     annual: { start: '09-30', end: '10-08' },
     i18n: {
-      'zh-CN': { tag: '国庆活动 · 预告', title: '给灵感，放个好假。', description: '国庆优惠准备中，活动每年 10 月 1 日至 7 日，具体优惠确认后公布。', action: '浏览会员商品' },
-      'zh-TW': { tag: '國慶活動 · 預告', title: '給靈感，放個好假。', description: '國慶優惠準備中，活動每年 10 月 1 日至 7 日，具體優惠確認後公布。', action: '瀏覽會員商品' },
+      'zh-CN': { tag: '国庆活动 · 预告', title: '国庆，让灵感尽兴。', description: '国庆优惠准备中，活动每年 10 月 1 日至 7 日，具体优惠确认后公布。', action: '浏览会员商品' },
+      'zh-TW': { tag: '國慶活動 · 預告', title: '國慶，讓靈感盡興。', description: '國慶優惠準備中，活動每年 10 月 1 日至 7 日，具體優惠確認後公布。', action: '瀏覽會員商品' },
       en: { tag: 'NATIONAL DAY · PREVIEW', title: 'A little break. A new idea.', description: 'Holiday offers are being prepared. Runs October 1–7 each year. Sale prices will be announced once confirmed.', action: 'Browse memberships' },
     },
   },
