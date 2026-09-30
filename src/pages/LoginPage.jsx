@@ -39,7 +39,7 @@ export default function LoginPage() {
       </h1>
       <p className="mb-8 text-center text-sm text-muted">{t('loginHint')}</p>
 
-      <form onSubmit={submit} className="rounded-2xl bg-card p-6 shadow-sm sm:p-8">
+      <form onSubmit={submit} className="glass-panel rounded-2xl bg-card p-6 shadow-sm sm:p-8">
         <div className="mb-6 grid grid-cols-2 gap-2 rounded-xl bg-canvas p-1">
           <button
             type="button"

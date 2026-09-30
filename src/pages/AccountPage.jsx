@@ -10,7 +10,7 @@ export default function AccountPage() {
     return (
       <div className="mx-auto max-w-md pt-8 text-center">
         <h1 className="mb-4 text-4xl font-black tracking-tight">{t('account')}</h1>
-        <div className="rounded-2xl bg-card p-8 shadow-sm">
+        <div className="glass-panel rounded-2xl bg-card p-8 shadow-sm">
           <p className="text-[14px] leading-7 text-muted">{t('loginRequired')}</p>
           <Link
             to="/login"
@@ -27,7 +27,7 @@ export default function AccountPage() {
   return (
     <div className="mx-auto max-w-md pt-8">
       <h1 className="mb-6 text-center text-4xl font-black tracking-tight">{t('account')}</h1>
-      <div className="rounded-2xl bg-card p-8 shadow-sm">
+      <div className="glass-panel rounded-2xl bg-card p-8 shadow-sm">
         <p className="text-[13px] text-muted">{t('loggedInAs')}</p>
         <p className="mt-1 text-[22px] font-semibold">{user.username}</p>
         <p className="mt-4 text-[14px] leading-7 text-muted">{t('accountBody')}</p>

@@ -19,7 +19,7 @@ export default function OrderSuccessPage() {
 
   if (!order) {
     return (
-      <div className="rounded-2xl bg-card px-6 py-16 text-center">
+      <div className="glass-panel rounded-2xl bg-card px-6 py-16 text-center">
         <p className="text-muted">{t('orderMissing')}</p>
         <Link to="/products" className="mt-4 inline-flex text-brand">
           {t('backToProducts')}
@@ -29,7 +29,7 @@ export default function OrderSuccessPage() {
   }
 
   return (
-    <div className="mx-auto max-w-xl rounded-2xl bg-card p-8 text-center">
+    <div className="glass-panel mx-auto max-w-xl rounded-2xl bg-card p-8 text-center">
       <p className="text-[13px] text-ok">{t('orderCreated')}</p>
       <h1 className="mt-2 text-[32px] font-semibold tracking-tight">{t('waitPay')}</h1>
       <p className="mt-2 text-[14px] text-muted">{t('demoOrder')}</p>

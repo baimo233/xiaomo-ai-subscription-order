@@ -28,7 +28,7 @@ export default function ProductDetailPage() {
 
   if (!product) {
     return (
-      <div className="rounded-2xl bg-card px-6 py-16 text-center">
+      <div className="glass-panel rounded-2xl bg-card px-6 py-16 text-center">
         <p className="text-muted">{t('notFound')}</p>
         <Link to="/products" className="mt-4 inline-flex text-brand">
           {t('backToProducts')}
@@ -69,7 +69,7 @@ export default function ProductDetailPage() {
         <span className="text-ink">{product.shortName}</span>
       </nav>
 
-      <div className="overflow-hidden rounded-2xl bg-card shadow-[0_8px_24px_-18px_rgba(0,0,0,0.28)]">
+      <div className="glass-panel overflow-hidden rounded-2xl bg-card shadow-[0_8px_24px_-18px_rgba(0,0,0,0.28)]">
         <div className="grid md:grid-cols-[280px_minmax(0,1fr)]">
           <ProductCover product={product} className="min-h-[240px]" />
           <div className="p-6 sm:p-8">
@@ -137,7 +137,7 @@ export default function ProductDetailPage() {
         </div>
       </div>
 
-      <section className="mt-5 rounded-2xl bg-card p-6">
+      <section className="glass-panel mt-5 rounded-2xl bg-card p-6">
           <h2 className="text-[16px] font-semibold">{t('planInfo')}</h2>
           <ul className="mt-4 space-y-3">
             {copy.features.map((feature) => (
@@ -151,7 +151,7 @@ export default function ProductDetailPage() {
           </ul>
       </section>
 
-      {product.category === 'ChatGPT' && available ? <NoticeDetail className="mt-5" /> : <section className="mt-5 rounded-2xl bg-card p-6"><h2 className="font-semibold">{t('buyNotice')}</h2><p className="my-3 text-sm leading-7 text-muted">{copy.notice}</p><a href={product.category === 'ChatGPT' ? 'https://chatgpt.com/pricing' : product.category === 'Codex' ? 'https://openai.com/codex/' : product.category === 'Claude' ? 'https://www.anthropic.com/pricing' : product.category === 'X-Twitter' ? 'https://help.x.com/en/using-x/x-premium' : 'https://one.google.com/about/google-ai-plans/'} target="_blank" rel="noreferrer" className="text-sm text-brand">{product.category} · {t('officialPlan')} ↗</a></section>}
+      {product.category === 'ChatGPT' && available ? <NoticeDetail className="mt-5" /> : <section className="glass-panel mt-5 rounded-2xl bg-card p-6"><h2 className="font-semibold">{t('buyNotice')}</h2><p className="my-3 text-sm leading-7 text-muted">{copy.notice}</p><a href={product.category === 'ChatGPT' ? 'https://chatgpt.com/pricing' : product.category === 'Codex' ? 'https://openai.com/codex/' : product.category === 'Claude' ? 'https://www.anthropic.com/pricing' : product.category === 'X-Twitter' ? 'https://help.x.com/en/using-x/x-premium' : 'https://one.google.com/about/google-ai-plans/'} target="_blank" rel="noreferrer" className="text-sm text-brand">{product.category} · {t('officialPlan')} ↗</a></section>}
     </div>
   )
 }

@@ -18,7 +18,7 @@ export default function CartPage() {
     <div>
       <h1 className="mb-6 text-[32px] font-semibold tracking-tight">{t('cart')}</h1>
       {rows.length === 0 ? (
-        <div className="rounded-2xl bg-card px-6 py-16 text-center">
+        <div className="glass-panel rounded-2xl bg-card px-6 py-16 text-center">
           <p className="text-muted">{t('cartEmpty')}</p>
           <Link to="/products" className="mt-4 inline-flex text-brand">
             {t('goShop')}
@@ -28,7 +28,7 @@ export default function CartPage() {
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_280px]">
           <div className="space-y-4">
             {rows.map(({ product, qty }) => (
-              <article key={product.id} className="overflow-hidden rounded-2xl bg-card">
+              <article key={product.id} className="glass-panel overflow-hidden rounded-2xl bg-card">
                 <div className="grid sm:grid-cols-[140px_minmax(0,1fr)]">
                   <ProductCover product={product} className="min-h-[120px]" />
                   <div className="flex flex-col gap-3 p-5">
@@ -69,7 +69,7 @@ export default function CartPage() {
               </article>
             ))}
           </div>
-          <aside className="h-fit rounded-2xl bg-card p-6">
+          <aside className="glass-panel h-fit rounded-2xl bg-card p-6">
             <p className="text-[13px] text-muted">{t('total')}</p>
             <p className="mt-1 text-[28px] font-semibold">{formatPrice(total)} CNY</p>
             <Link

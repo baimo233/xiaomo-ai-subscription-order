@@ -42,7 +42,7 @@ export default function CheckoutPage() {
 
   if (!product) {
     return (
-      <div className="rounded-2xl bg-card px-6 py-16 text-center">
+      <div className="glass-panel rounded-2xl bg-card px-6 py-16 text-center">
         <p className="text-muted">{t('notFound')}</p>
         <Link to="/products" className="mt-4 inline-flex text-brand">
           {t('backToProducts')}
@@ -51,7 +51,7 @@ export default function CheckoutPage() {
     )
   }
 
-  if (!isPurchasable(product)) return <div className="rounded-2xl bg-card p-10 text-center"><h1 className="text-2xl font-semibold">{copy.name}</h1><p className="my-5 text-muted">{t('pendingNotice')}</p><Link className="text-brand" to={`/products/${product.id}`}>{t('planInfo')} →</Link></div>
+  if (!isPurchasable(product)) return <div className="glass-panel rounded-2xl bg-card p-10 text-center"><h1 className="text-2xl font-semibold">{copy.name}</h1><p className="my-5 text-muted">{t('pendingNotice')}</p><Link className="text-brand" to={`/products/${product.id}`}>{t('planInfo')} →</Link></div>
 
   function submit(event) {
     event.preventDefault()
@@ -99,7 +99,7 @@ export default function CheckoutPage() {
 
       <form onSubmit={submit} className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div className="space-y-5">
-          {isCodex && <fieldset className="rounded-2xl bg-card p-5 sm:p-6">
+          {isCodex && <fieldset className="glass-panel rounded-2xl bg-card p-5 sm:p-6">
             <legend className="sr-only">{t('chooseCredits')}</legend>
             <h2 className="text-base font-semibold">{t('chooseCredits')}</h2>
             <div className="mt-4 grid grid-cols-2 gap-3">
@@ -110,7 +110,7 @@ export default function CheckoutPage() {
             </div>
           </fieldset>}
 
-          <section className="overflow-hidden rounded-2xl bg-card">
+          <section className="glass-panel overflow-hidden rounded-2xl bg-card">
             <div className="grid sm:grid-cols-[160px_minmax(0,1fr)]">
               <ProductCover product={product} className="min-h-[140px]" />
               <div className="p-5">
@@ -127,7 +127,7 @@ export default function CheckoutPage() {
             </div>
           </section>
 
-          <section className="rounded-2xl bg-card p-5 sm:p-6">
+          <section className="glass-panel rounded-2xl bg-card p-5 sm:p-6">
             <h2 className="text-[16px] font-semibold">{t('shippingInfo')}</h2>
             <div className="mt-4 grid gap-4">
               <label className="block">
@@ -185,7 +185,7 @@ export default function CheckoutPage() {
           </section>
         </div>
 
-        <aside className="h-fit rounded-2xl bg-card p-5 sm:p-6">
+        <aside className="glass-panel h-fit rounded-2xl bg-card p-5 sm:p-6">
           <h2 className="text-[16px] font-semibold">{t('payment')}</h2>
           <div className="mt-4 grid gap-2">
             {payments.map((item) => (
