@@ -97,16 +97,16 @@ export const products = [
   },
   {
     "id": "chatgpt-pro-100",
-    "shortName": "GPT Pro 100额度",
+    "shortName": "ChatGPT Pro 100额度",
     "category": "ChatGPT",
     "price": 685,
     "currency": "CNY",
     "i18n": {
       "zh-CN": {
-        "name": "GPT Pro 100额度",
+        "name": "ChatGPT Pro 100额度",
         "region": "会员订阅",
         "duration": "1 个月",
-        "description": "GPT Pro 100额度月度套餐，适合更高强度的工作与创作。",
+        "description": "ChatGPT Pro 100额度月度套餐，适合更高强度的工作与创作。",
         "notice": "订阅时长为 1 个月。下单前请确认账号要求和额度说明，具体使用规则以商品说明及服务商实际规则为准。",
         "features": [
           "Pro 100额度",
@@ -115,10 +115,10 @@ export const products = [
         ]
       },
       "zh-TW": {
-        "name": "GPT Pro 100額度",
+        "name": "ChatGPT Pro 100額度",
         "region": "會員訂閱",
         "duration": "1 個月",
-        "description": "GPT Pro 100額度月度方案，適合更高強度的工作與創作。",
+        "description": "ChatGPT Pro 100額度月度方案，適合更高強度的工作與創作。",
         "notice": "訂閱時長為 1 個月。下單前請確認帳號要求和額度說明，具體使用規則以商品說明及服務商實際規則為準。",
         "features": [
           "Pro 100額度",
@@ -127,10 +127,10 @@ export const products = [
         ]
       },
       "en": {
-        "name": "GPT Pro 100 Quota",
+        "name": "ChatGPT Pro 100 Quota",
         "region": "Membership",
         "duration": "1 month",
-        "description": "GPT Pro 100 quota monthly plan for more intensive work and creation.",
+        "description": "ChatGPT Pro 100 quota monthly plan for more intensive work and creation.",
         "notice": "One-month subscription. Confirm account requirements and quota details before ordering. Usage follows the product description and provider terms.",
         "features": [
           "Pro 100 quota",
@@ -142,16 +142,16 @@ export const products = [
   },
   {
     "id": "chatgpt-pro-200",
-    "shortName": "GPT Pro 200额度",
+    "shortName": "ChatGPT Pro 200额度",
     "category": "ChatGPT",
     "price": 1200,
     "currency": "CNY",
     "i18n": {
       "zh-CN": {
-        "name": "GPT Pro 200额度",
+        "name": "ChatGPT Pro 200额度",
         "region": "会员订阅",
         "duration": "1 个月",
-        "description": "GPT Pro 200额度月度套餐，适合更高强度的工作与创作。",
+        "description": "ChatGPT Pro 200额度月度套餐，适合更高强度的工作与创作。",
         "notice": "订阅时长为 1 个月。下单前请确认账号要求和额度说明，具体使用规则以商品说明及服务商实际规则为准。",
         "features": [
           "Pro 200额度",
@@ -160,10 +160,10 @@ export const products = [
         ]
       },
       "zh-TW": {
-        "name": "GPT Pro 200額度",
+        "name": "ChatGPT Pro 200額度",
         "region": "會員訂閱",
         "duration": "1 個月",
-        "description": "GPT Pro 200額度月度方案，適合更高強度的工作與創作。",
+        "description": "ChatGPT Pro 200額度月度方案，適合更高強度的工作與創作。",
         "notice": "訂閱時長為 1 個月。下單前請確認帳號要求和額度說明，具體使用規則以商品說明及服務商實際規則為準。",
         "features": [
           "Pro 200額度",
@@ -172,10 +172,10 @@ export const products = [
         ]
       },
       "en": {
-        "name": "GPT Pro 200 Quota",
+        "name": "ChatGPT Pro 200 Quota",
         "region": "Membership",
         "duration": "1 month",
-        "description": "GPT Pro 200 quota monthly plan for more intensive work and creation.",
+        "description": "ChatGPT Pro 200 quota monthly plan for more intensive work and creation.",
         "notice": "One-month subscription. Confirm account requirements and quota details before ordering. Usage follows the product description and provider terms.",
         "features": [
           "Pro 200 quota",
@@ -187,16 +187,16 @@ export const products = [
   },
   {
     "id": "chatgpt-pro-500",
-    "shortName": "GPT Pro 500额度",
+    "shortName": "ChatGPT Pro 500额度",
     "category": "ChatGPT",
     "price": 3399,
     "currency": "CNY",
     "i18n": {
       "zh-CN": {
-        "name": "GPT Pro 500额度",
+        "name": "ChatGPT Pro 500额度",
         "region": "会员订阅",
         "duration": "1 个月",
-        "description": "GPT Pro 500额度月度套餐，适合更高强度的工作与创作。",
+        "description": "ChatGPT Pro 500额度月度套餐，适合更高强度的工作与创作。",
         "notice": "订阅时长为 1 个月。下单前请确认账号要求和额度说明，具体使用规则以商品说明及服务商实际规则为准。",
         "features": [
           "Pro 500额度",
@@ -205,10 +205,10 @@ export const products = [
         ]
       },
       "zh-TW": {
-        "name": "GPT Pro 500額度",
+        "name": "ChatGPT Pro 500額度",
         "region": "會員訂閱",
         "duration": "1 個月",
-        "description": "GPT Pro 500額度月度方案，適合更高強度的工作與創作。",
+        "description": "ChatGPT Pro 500額度月度方案，適合更高強度的工作與創作。",
         "notice": "訂閱時長為 1 個月。下單前請確認帳號要求和額度說明，具體使用規則以商品說明及服務商實際規則為準。",
         "features": [
           "Pro 500額度",
@@ -217,10 +217,10 @@ export const products = [
         ]
       },
       "en": {
-        "name": "GPT Pro 500 Quota",
+        "name": "ChatGPT Pro 500 Quota",
         "region": "Membership",
         "duration": "1 month",
-        "description": "GPT Pro 500 quota monthly plan for more intensive work and creation.",
+        "description": "ChatGPT Pro 500 quota monthly plan for more intensive work and creation.",
         "notice": "One-month subscription. Confirm account requirements and quota details before ordering. Usage follows the product description and provider terms.",
         "features": [
           "Pro 500 quota",
@@ -323,6 +323,96 @@ export const products = [
           "Deep research",
           "Google AI experience",
           "Monthly subscription"
+        ]
+      }
+    }
+  },
+  {
+    "id": "x-premium-monthly",
+    "shortName": "X-Twitter Premium 月度",
+    "category": "X-Twitter",
+    "price": 70,
+    "currency": "CNY",
+    "i18n": {
+      "zh-CN": {
+        "name": "X-Twitter Premium 月度会员",
+        "region": "Premium 会员",
+        "duration": "1 个月",
+        "description": "X-Twitter Premium 月度会员订阅，为你的日常社交与内容创作提供更多可能。",
+        "notice": "下单前请确认账号要求及订阅资格，具体开通方式与权益以商品说明及 X 实际规则为准。",
+        "features": [
+          "Premium 会员",
+          "1 个月",
+          "下单前确认账号要求"
+        ]
+      },
+      "zh-TW": {
+        "name": "X-Twitter Premium 月度會員",
+        "region": "Premium 會員",
+        "duration": "1 個月",
+        "description": "X-Twitter Premium 月度會員訂閱，為你的日常社交與內容創作提供更多可能。",
+        "notice": "下單前請確認帳號要求及訂閱資格，具體開通方式與權益以商品說明及 X 實際規則為準。",
+        "features": [
+          "Premium 會員",
+          "1 個月",
+          "下單前確認帳號要求"
+        ]
+      },
+      "en": {
+        "name": "X-Twitter Premium Monthly Membership",
+        "region": "Premium",
+        "duration": "1 month",
+        "description": "X-Twitter Premium membership for 1 month.",
+        "notice": "Confirm account requirements and eligibility before ordering. Activation and benefits follow the product description and X rules.",
+        "features": [
+          "Premium membership",
+          "1 month",
+          "Confirm account eligibility"
+        ]
+      }
+    }
+  },
+  {
+    "id": "x-premium-annual",
+    "shortName": "X-Twitter Premium 年度",
+    "category": "X-Twitter",
+    "price": 600,
+    "currency": "CNY",
+    "i18n": {
+      "zh-CN": {
+        "name": "X-Twitter Premium 年度会员",
+        "region": "Premium 会员",
+        "duration": "1 年",
+        "description": "X-Twitter Premium 年度会员订阅，为你的日常社交与内容创作提供更多可能。",
+        "notice": "下单前请确认账号要求及订阅资格，具体开通方式与权益以商品说明及 X 实际规则为准。",
+        "features": [
+          "Premium 会员",
+          "1 年",
+          "下单前确认账号要求"
+        ]
+      },
+      "zh-TW": {
+        "name": "X-Twitter Premium 年度會員",
+        "region": "Premium 會員",
+        "duration": "1 年",
+        "description": "X-Twitter Premium 年度會員訂閱，為你的日常社交與內容創作提供更多可能。",
+        "notice": "下單前請確認帳號要求及訂閱資格，具體開通方式與權益以商品說明及 X 實際規則為準。",
+        "features": [
+          "Premium 會員",
+          "1 年",
+          "下單前確認帳號要求"
+        ]
+      },
+      "en": {
+        "name": "X-Twitter Premium Annual Membership",
+        "region": "Premium",
+        "duration": "1 year",
+        "description": "X-Twitter Premium membership for 1 year.",
+        "notice": "Confirm account requirements and eligibility before ordering. Activation and benefits follow the product description and X rules.",
+        "features": [
+          "Premium membership",
+          "1 year",
+          "Confirm account eligibility"
         ]
       }
     }

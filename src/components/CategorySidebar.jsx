@@ -6,6 +6,7 @@ const CATEGORIES = [
   { id: 'ChatGPT', label: 'ChatGPT' },
   { id: 'Claude', label: 'Claude' },
   { id: 'Gemini', label: 'Gemini' },
+  { id: 'X-Twitter', label: 'X-Twitter' },
 ]
 
 export default function CategorySidebar({ query, onQueryChange, category, onCategoryChange }) {

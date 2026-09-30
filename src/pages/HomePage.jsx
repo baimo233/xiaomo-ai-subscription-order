@@ -7,7 +7,7 @@ import { IconArrowRight } from '../components/Icons.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
 import { products } from '../data/products.js'
 
-const brands = ['ChatGPT', 'Claude', 'Gemini']
+const brands = ['ChatGPT', 'Claude', 'Gemini', 'X-Twitter']
 export default function HomePage() {
   const { t } = useSettings()
   const [filter, setFilter] = useState('all')

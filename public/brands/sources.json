@@ -11,5 +11,10 @@
   "Gemini": {
     "page": "https://gemini.google",
     "asset": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png"
+  },
+  "X-Twitter": {
+    "page": "https://about.x.com/en/who-we-are/brand-toolkit",
+    "asset": "https://about.x.com/content/dam/about-twitter/x/brand-toolkit/x-logo.zip",
+    "note": "Unmodified official logo-black.png from the X brand toolkit archive."
   }
 }
