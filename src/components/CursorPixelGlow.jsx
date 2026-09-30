@@ -19,7 +19,8 @@ export default function CursorPixelGlow() {
     context.setTransform(ratio, 0, 0, ratio, 0, 0)
     function createPixel(randomAge = false) {
       const angle = Math.random() * Math.PI * 2
-      const radius = 8 + Math.random() * 30
+      // Bias positions toward the pointer; the outer sparks remain sparse.
+      const radius = 4 + Math.random() ** 1.65 * 34
       const life = .85 + Math.random() * 1.5
       return {
         x: WIDTH / 2 + Math.cos(angle) * radius,
@@ -29,7 +30,7 @@ export default function CursorPixelGlow() {
         life, age: randomAge ? Math.random() * life : 0,
       }
     }
-    const pixels = Array.from({ length: 30 }, () => createPixel(true))
+    const pixels = Array.from({ length: 48 }, () => createPixel(true))
     let colors = [], frame = 0, lastTime = 0, initialized = false
     let x = 0, y = 0, targetX = 0, targetY = 0
 
