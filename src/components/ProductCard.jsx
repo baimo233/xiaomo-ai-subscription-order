@@ -15,11 +15,11 @@ export default function ProductCard({ product, delay = 0 }) {
   const { t, locale } = useSettings()
   const { pricing } = usePromotions()
   const copy = localizeProduct(product, locale)
-  const available = isPurchasable(product)
+  const available = Boolean(product.variantIds) || isPurchasable(product)
   function buy() {
     if (!available) return
     if (!user) return navigate('/login', { state: { from: `/checkout/${product.id}` } })
-    addItem(product.id, 1)
+    if (!product.variantIds) addItem(product.id, 1)
     navigate(`/checkout/${product.id}`, { state: { qty: 1 } })
   }
   return <Reveal delay={delay}><article className="shop-card group">
@@ -32,7 +32,7 @@ export default function ProductCard({ product, delay = 0 }) {
       <h3 className="text-lg font-semibold"><Link to={`/products/${product.id}`} className="hover:text-brand">{copy.name}</Link></h3>
       <p className="mt-2 mb-5 line-clamp-2 text-sm leading-6 text-muted">{copy.description}</p>
       <div className="mt-auto flex items-end justify-between gap-2 border-t border-line/60 pt-4">
-        <div><OfferLabel product={product} /><span className="block text-[11px] text-muted">{t('price')}</span><span className="card-price">{available ? `¥${formatPrice(pricing(product).price)}` : t('pricePending')}</span>{available && <span className="ml-1 text-xs text-muted">CNY</span>}</div>
+        <div><OfferLabel product={product} /><span className="block text-[11px] text-muted">{t('price')}</span><span className="card-price">{available ? `¥${formatPrice(pricing(product).price)}` : t('pricePending')}</span>{product.variantIds && <span className="ml-1 text-xs text-muted">{t('priceFrom')}</span>}{available && <span className="ml-1 text-xs text-muted">CNY</span>}</div>
         {available ? <button onClick={buy} type="button" className="card-buy" aria-label={`${t('quickBuy')} ${copy.name}`}><IconCart /></button> : <Link className="card-buy" to={`/products/${product.id}`} aria-label={`${t('planInfo')} ${copy.name}`}><IconArrowRight /></Link>}
       </div>
     </div>

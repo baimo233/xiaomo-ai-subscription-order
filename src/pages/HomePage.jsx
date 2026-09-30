@@ -5,7 +5,7 @@ import PromotionCarousel from '../components/PromotionCarousel.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { IconArrowRight } from '../components/Icons.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
-import { products } from '../data/products.js'
+import { catalogProducts as products } from '../data/products.js'
 
 const brands = ['ChatGPT', 'Codex', 'Claude', 'Gemini', 'X-Twitter']
 export default function HomePage() {

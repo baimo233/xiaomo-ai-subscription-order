@@ -1,5 +1,7 @@
 export const messages = {
   'zh-CN': {
+    chooseCredits: '选择点数额度',
+    priceFrom: '起',
     qqGroup: 'QQ群',
     nationalDaySchedule: '每年 10 月 1 日—7 日 · 北京时间',
     promotions: "活动与公告",
@@ -160,6 +162,8 @@ export const messages = {
     invalidPassword: '密码至少 4 个字符。',
   },
   'zh-TW': {
+    chooseCredits: '選擇點數額度',
+    priceFrom: '起',
     qqGroup: 'QQ 群組',
     nationalDaySchedule: '每年 10 月 1 日—7 日 · 北京時間',
     promotions: "活動與公告",
@@ -320,6 +324,8 @@ export const messages = {
     invalidPassword: '密碼至少 4 個字元。',
   },
   en: {
+    chooseCredits: 'Choose credit pack',
+    priceFrom: 'and up',
     qqGroup: 'QQ Group',
     nationalDaySchedule: 'October 1–7 each year · China time',
     promotions: "Offers & news",

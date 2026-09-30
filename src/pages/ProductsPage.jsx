@@ -5,7 +5,7 @@ import PromotionCarousel from '../components/PromotionCarousel.jsx'
 import ProductCard from '../components/ProductCard.jsx'
 import { ProductsPageSkeleton } from '../components/Skeletons.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
-import { products } from '../data/products.js'
+import { catalogProducts as products } from '../data/products.js'
 import { useSkeleton } from '../hooks/useSkeleton.js'
 
 export default function ProductsPage() {

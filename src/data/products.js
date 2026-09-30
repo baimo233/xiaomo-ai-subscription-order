@@ -599,8 +599,20 @@ export const products = [
   }
 ]
 
+export const codexVariants = products.filter(product => product.category === 'Codex')
+export const codexPack = {
+  ...codexVariants[0],
+  id: 'codex-credits', shortName: 'Codex 点数', variantIds: codexVariants.map(product => product.id),
+  i18n: {
+    'zh-CN': { ...codexVariants[0].i18n['zh-CN'], name: 'Codex 点数', duration: '4 档额度可选', description: '250 / 500 / 1000 / 2500 点数，进入下单页选择具体额度。', features: ['250 / 500 / 1000 / 2500 点数', '下单时选择额度', '下单前确认账号要求'] },
+    'zh-TW': { ...codexVariants[0].i18n['zh-TW'], name: 'Codex 點數', duration: '4 檔額度可選', description: '250 / 500 / 1000 / 2500 點數，進入下單頁選擇具體額度。', features: ['250 / 500 / 1000 / 2500 點數', '下單時選擇額度', '下單前確認帳號要求'] },
+    en: { ...codexVariants[0].i18n.en, name: 'Codex Credits', duration: '4 credit options', description: '250 / 500 / 1000 / 2500 credits. Choose your pack at checkout.', features: ['250 / 500 / 1000 / 2500 credits', 'Choose at checkout', 'Confirm account requirements'] },
+  },
+}
+export const catalogProducts = [...products.filter(product => product.category !== 'Codex'), codexPack]
+
 export function getProduct(id) {
-  return products.find((item) => item.id === id)
+  return id === codexPack.id ? codexPack : products.find((item) => item.id === id)
 }
 
 export function localizeProduct(product, locale) {
@@ -614,5 +626,5 @@ export function formatPrice(value) {
 }
 
 export function isPurchasable(product) {
-  return Boolean(product && product.status !== 'coming-soon' && Number.isFinite(product.price) && product.price > 0)
+  return Boolean(product && !product.variantIds && product.status !== 'coming-soon' && Number.isFinite(product.price) && product.price > 0)
 }

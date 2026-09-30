@@ -37,7 +37,7 @@ export default function ProductDetailPage() {
     )
   }
 
-  const available = isPurchasable(product)
+  const available = Boolean(product.variantIds) || isPurchasable(product)
 
   function buyNow() {
     if (!available) return
@@ -54,6 +54,7 @@ export default function ProductDetailPage() {
       navigate('/login', { state: { from: `/products/${product.id}` } })
       return
     }
+    if (product.variantIds) { buyNow(); return }
     addItem(product.id, qty)
   }
 
@@ -94,7 +95,7 @@ export default function ProductDetailPage() {
                 <OfferLabel product={product} /><p className="text-[12px] text-muted">{t('currentPrice')}</p>
                 <p className="flex items-baseline gap-2">
                   <span className="text-[36px] font-semibold tracking-tight">{available ? formatPrice(pricing(product).price) : t('pricePending')}</span>
-                  {available && <span className="text-muted">CNY</span>}
+                  {product.variantIds && <span className="text-muted">{t('priceFrom')}</span>}{available && <span className="text-muted">CNY</span>}
                 </p>
               </div>
               <div className="flex items-center gap-3">
@@ -129,7 +130,7 @@ export default function ProductDetailPage() {
                 onClick={addToCart}
                 className="inline-flex h-11 w-full items-center justify-center rounded-xl bg-canvas px-5 text-[14px] font-medium text-ink hover:bg-soft sm:w-auto"
               >
-                {t('addToCart')}
+                {t(product.variantIds ? 'chooseCredits' : 'addToCart')}
               </button>
             </div>
           </div>

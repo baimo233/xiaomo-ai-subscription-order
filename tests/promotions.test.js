@@ -1,10 +1,19 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { getPricing, isCampaignActive } from '../src/data/promotions.js'
-import { getProduct, isPurchasable } from '../src/data/products.js'
+import { getProduct, isPurchasable, catalogProducts, codexPack } from '../src/data/products.js'
 
 const at = date => Date.parse(date)
 const sale = { id: 'test', enabled: true, annual: { start: '10-01', end: '10-08' }, salePrices: { 'chatgpt-pro-100': 600 } }
+test('Codex catalog groups variants while old IDs retain exact prices', () => {
+  assert.equal(catalogProducts.filter(p => p.category === 'Codex').length, 1)
+  assert.equal(isPurchasable(codexPack), false)
+  for (const [points, price] of [[250,90],[500,160],[1000,299],[2500,699]]) {
+    assert.equal(getProduct(`codex-${points}`).price, price)
+    assert.ok(codexPack.variantIds.includes(`codex-${points}`))
+    assert.equal(isPurchasable(getProduct(`codex-${points}`)), true)
+  }
+})
 test('Pro prices are available and no longer pending', () => {
   for (const [quota, price] of [[100,685],[200,1200],[500,3399]]) {
     const product = getProduct(`chatgpt-pro-${quota}`)

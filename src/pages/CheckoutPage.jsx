@@ -6,7 +6,7 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { IconChevron, IconHome } from '../components/Icons.jsx'
 import ProductCover from '../components/ProductCover.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
-import { formatPrice, getProduct, localizeProduct, isPurchasable } from '../data/products.js'
+import { formatPrice, getProduct, localizeProduct, isPurchasable, codexVariants } from '../data/products.js'
 
 function createOrderId() {
   const stamp = Date.now().toString(36).toUpperCase()
@@ -16,7 +16,11 @@ function createOrderId() {
 
 export default function CheckoutPage() {
   const { id } = useParams()
-  const product = getProduct(id)
+  const [selection, setSelection] = useState(null)
+  const routeProduct = getProduct(id)
+  const isCodex = routeProduct?.category === 'Codex'
+  const selectedId = selection?.route === id ? selection.id : (routeProduct?.variantIds?.[0] || id)
+  const product = getProduct(isCodex ? selectedId : id)
   const { t, locale } = useSettings()
   const { pricing } = usePromotions()
   const copy = localizeProduct(product, locale)
@@ -95,6 +99,17 @@ export default function CheckoutPage() {
 
       <form onSubmit={submit} className="grid gap-5 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div className="space-y-5">
+          {isCodex && <fieldset className="rounded-2xl bg-card p-5 sm:p-6">
+            <legend className="sr-only">{t('chooseCredits')}</legend>
+            <h2 className="text-base font-semibold">{t('chooseCredits')}</h2>
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              {codexVariants.map(variant => <label key={variant.id} className={`credit-choice ${product.id === variant.id ? 'selected' : ''}`}>
+                <input type="radio" name="codex-credits" value={variant.id} checked={product.id === variant.id} onChange={() => setSelection({ route: id, id: variant.id })} />
+                <span><strong>{localizeProduct(variant, locale).duration}</strong><span>¥{formatPrice(pricing(variant).price)}</span></span>
+              </label>)}
+            </div>
+          </fieldset>}
+
           <section className="overflow-hidden rounded-2xl bg-card">
             <div className="grid sm:grid-cols-[160px_minmax(0,1fr)]">
               <ProductCover product={product} className="min-h-[140px]" />
