@@ -1,5 +1,6 @@
 export const messages = {
   'zh-CN': {
+    qqGroup: 'QQ群',
     nationalDaySchedule: '每年 10 月 1 日—7 日 · 北京时间',
     promotions: "活动与公告",
     carousel: "轮播",
@@ -159,6 +160,7 @@ export const messages = {
     invalidPassword: '密码至少 4 个字符。',
   },
   'zh-TW': {
+    qqGroup: 'QQ 群組',
     nationalDaySchedule: '每年 10 月 1 日—7 日 · 北京時間',
     promotions: "活動與公告",
     carousel: "輪播",
@@ -318,6 +320,7 @@ export const messages = {
     invalidPassword: '密碼至少 4 個字元。',
   },
   en: {
+    qqGroup: 'QQ Group',
     nationalDaySchedule: 'October 1–7 each year · China time',
     promotions: "Offers & news",
     carousel: "carousel",

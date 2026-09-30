@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useSettings } from '../context/SettingsContext.jsx'
 import { site } from '../data/site.js'
-import { IconArrowUp, IconGrid, IconHome, IconWeChat } from './Icons.jsx'
+import { IconArrowUp, IconGrid, IconHome } from './Icons.jsx'
 
 export default function Footer() {
   const { t } = useSettings()
@@ -38,8 +38,8 @@ export default function Footer() {
           <h2 className="mb-4 text-[14px] font-semibold">{t('contactUs')}</h2>
           <div className="space-y-2">
             <div className="inline-flex items-center gap-2 rounded-xl bg-canvas px-3 py-2 text-[13px] text-ink">
-              <IconWeChat className="h-[18px] w-[18px] text-[#07C160]" />
-              {t('wechat')} {site.wechat}
+              <img src={`${import.meta.env.BASE_URL}brands/qq.png`} alt="" aria-hidden="true" className="h-7 w-7 object-contain" />
+              {t('qqGroup')} {site.qqGroup}
             </div>
           </div>
         </div>
