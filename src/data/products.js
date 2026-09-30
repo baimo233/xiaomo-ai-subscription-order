@@ -280,48 +280,57 @@ export const products = [
   },
   {
     "id": "claude-max-100",
-    "shortName": "Claude Max 100刀",
+    "shortName": "Claude Max 5x CDK直充",
     "category": "Claude",
-    "price": 545,
+    "price": 879,
     "currency": "CNY",
     "i18n": {
       "zh-CN": {
-        "name": "【成品号】Claude Max 100刀",
-        "region": "成品账号",
-        "duration": "30 天",
-        "description": "Claude Max 100刀，30天成品账号。质保掉订阅，封号不质保。",
-        "notice": "质保掉订阅，封号不质保，充值没问题封号全是自己的VPN原因【已经过完kyc，可以正常使用】。",
+        "name": "iOS Claude Max 5x CDK直充",
+        "region": "iOS 正规充值",
+        "duration": "CDK 永久有效",
+        "description": "正规iOS充值，无需上号，使用Claude ID即可充值。质保不掉订阅，封号无售后。",
+        "notice": "只质保订阅，封号不质保，秒封也不管，这都是环境问题。V封号99%的原因是由于Claude普号本身的问题，无售后。常见封号原因：频繁变动IP。站点有图文教程（强烈建议小白先看再食用）。如遇充值失败，过一会再提交即可或联系客服。",
         "features": [
-          "Claude Max 100刀【30天】",
-          "已经过完kyc，可以正常使用",
-          "邮箱接码地址mail.com",
-          "非礼品码那种，谷歌充值，目前最稳的货"
+          "Claude Max 5x CDK直充",
+          "正规iOS充值，无需上号，使用Claude ID即可充值",
+          "支持安卓、支持iOS，放心购买",
+          "CDK永久有效，无到期时间",
+          "未使用卡密永久有效，不会过期",
+          "只要有卡密，24小时都可自助充值",
+          "质保不掉订阅，封号无售后"
         ]
       },
       "zh-TW": {
-        "name": "【成品號】Claude Max 100刀",
-        "region": "成品帳號",
-        "duration": "30 天",
-        "description": "Claude Max 100刀，30天成品帳號。質保掉訂閱，封號不質保。",
-        "notice": "質保掉訂閱，封號不質保，儲值沒問題封號全是自己的VPN原因【已經過完kyc，可以正常使用】。",
+        "name": "iOS Claude Max 5x CDK直充",
+        "region": "iOS 正規儲值",
+        "duration": "CDK 永久有效",
+        "description": "正規iOS儲值，無需登入帳號，使用Claude ID即可儲值。質保不掉訂閱，封號無售後。",
+        "notice": "只質保訂閱，封號不質保，秒封也不管，這都是環境問題。V封號99%的原因是由於Claude普號本身的問題，無售後。常見封號原因：頻繁變動IP。站點有圖文教學（強烈建議新手先看再使用）。如遇儲值失敗，稍後再提交即可或聯絡客服。",
         "features": [
-          "Claude Max 100刀【30天】",
-          "已經過完kyc，可以正常使用",
-          "信箱接碼地址mail.com",
-          "非禮品碼那種，Google儲值，目前最穩的貨"
+          "Claude Max 5x CDK直充",
+          "正規iOS儲值，無需登入帳號，使用Claude ID即可儲值",
+          "支援Android、支援iOS，放心購買",
+          "CDK永久有效，無到期時間",
+          "未使用卡密永久有效，不會過期",
+          "只要有卡密，24小時都可自助儲值",
+          "質保不掉訂閱，封號無售後"
         ]
       },
       "en": {
-        "name": "Claude Max $100 Ready-made Account",
-        "region": "Ready-made account",
-        "duration": "30 days",
-        "description": "Claude Max $100 ready-made account for 30 days. Subscription loss is covered; account bans are not.",
-        "notice": "Subscription loss is covered; account bans are not. The listing states that top-ups are reliable and bans result from the user's VPN. KYC is already completed and the account is ready to use.",
+        "name": "iOS Claude Max 5x CDK Top-up",
+        "region": "iOS top-up",
+        "duration": "CDK does not expire",
+        "description": "Official iOS top-up using your Claude ID, without account login. Subscription loss is covered; account bans have no after-sales support.",
+        "notice": "Only subscriptions are covered; account bans, including immediate bans, have no after-sales support. The listing attributes bans to the account environment and 99% of V bans to the underlying Claude account. Frequent IP changes are listed as a common cause. Read the illustrated site tutorial before using the code. If a top-up fails, try again later or contact support.",
         "features": [
-          "Claude Max $100 plan · 30 days",
-          "KYC completed; ready to use",
-          "Email verification address: mail.com",
-          "Google top-up, not a gift code; described as the most stable stock"
+          "Claude Max 5x CDK top-up",
+          "iOS top-up using Claude ID; no account login required",
+          "Supports Android and iOS",
+          "CDK has no expiration date",
+          "Unused codes remain valid permanently",
+          "Self-service top-up with your code, available 24 hours a day",
+          "Subscription loss is covered; account bans have no after-sales support"
         ]
       }
     }
