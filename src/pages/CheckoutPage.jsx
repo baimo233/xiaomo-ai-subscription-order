@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { IconChevron, IconHome } from '../components/Icons.jsx'
 import ProductCover from '../components/ProductCover.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
-import { formatPrice, getProduct, localizeProduct } from '../data/products.js'
+import { formatPrice, getProduct, localizeProduct, isPurchasable } from '../data/products.js'
 
 function createOrderId() {
   const stamp = Date.now().toString(36).toUpperCase()
@@ -43,8 +43,11 @@ export default function CheckoutPage() {
     )
   }
 
+  if (!isPurchasable(product)) return <div className="rounded-2xl bg-card p-10 text-center"><h1 className="text-2xl font-semibold">{copy.name}</h1><p className="my-5 text-muted">{t('pendingNotice')}</p><Link className="text-brand" to={`/products/${product.id}`}>{t('planInfo')} →</Link></div>
+
   function submit(event) {
     event.preventDefault()
+    if (!isPurchasable(product)) return
     if (!contact.trim() || !email.trim()) {
       setError(t('fillRequired'))
       return
@@ -82,7 +85,7 @@ export default function CheckoutPage() {
         <div className="space-y-5">
           <section className="overflow-hidden rounded-2xl bg-card">
             <div className="grid sm:grid-cols-[160px_minmax(0,1fr)]">
-              <ProductCover className="min-h-[140px]" />
+              <ProductCover product={product} className="min-h-[140px]" />
               <div className="p-5">
                 <p className="text-[12px] text-muted">{product.category}</p>
                 <h2 className="mt-1 text-[16px] font-semibold">{copy.name}</h2>

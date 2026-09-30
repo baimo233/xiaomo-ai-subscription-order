@@ -1,12 +1,12 @@
 import { createContext, useContext, useMemo, useState } from 'react'
-import { getProduct } from '../data/products.js'
+import { getProduct, isPurchasable } from '../data/products.js'
 
 const STORAGE_KEY = 'xiaomo-lab-cart'
 
 function readCart() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    return raw ? JSON.parse(raw) : []
+    return raw ? JSON.parse(raw).filter(item => isPurchasable(getProduct(item.id))) : []
   } catch {
     return []
   }
@@ -34,6 +34,7 @@ export function CartProvider({ children }) {
       count,
       total,
       addItem(id, qty = 1) {
+        if (!isPurchasable(getProduct(id))) return
         const next = [...items]
         const found = next.find((item) => item.id === id)
         if (found) found.qty += qty

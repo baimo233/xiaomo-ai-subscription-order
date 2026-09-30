@@ -4,6 +4,8 @@ import { useSettings } from '../context/SettingsContext.jsx'
 const CATEGORIES = [
   { id: 'all', labelKey: 'allProducts' },
   { id: 'ChatGPT', label: 'ChatGPT' },
+  { id: 'Claude', label: 'Claude' },
+  { id: 'Gemini', label: 'Gemini' },
 ]
 
 export default function CategorySidebar({ query, onQueryChange, category, onCategoryChange }) {
@@ -13,6 +15,7 @@ export default function CategorySidebar({ query, onQueryChange, category, onCate
     <aside className="h-fit w-full shrink-0 rounded-2xl bg-card p-4 shadow-sm lg:sticky lg:top-24 lg:w-[240px]">
       <p className="mb-2 text-[12px] text-muted">{t('search')}</p>
       <input
+        aria-label={t('search')}
         value={query}
         onChange={(event) => onQueryChange(event.target.value)}
         placeholder={t('searchPlaceholder')}
@@ -29,6 +32,7 @@ export default function CategorySidebar({ query, onQueryChange, category, onCate
             <button
               key={item.id}
               type="button"
+              aria-pressed={active}
               onClick={() => onCategoryChange(item.id)}
               className={`flex h-10 items-center gap-2 rounded-xl px-3 text-left text-[13px] font-medium transition ${
                 active ? 'bg-brand text-white' : 'text-ink hover:bg-canvas'

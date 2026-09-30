@@ -1,0 +1,15 @@
+{
+  "ChatGPT": {
+    "page": "https://chatgpt.com",
+    "asset": "https://cdn.oaistatic.com/assets/favicon-o20kmmos.svg"
+  },
+  "Claude": {
+    "page": "https://claude.com",
+    "asset": "https://claude.com/",
+    "note": "Standalone symbol path copied without changes from the official website header SVG."
+  },
+  "Gemini": {
+    "page": "https://gemini.google",
+    "asset": "https://www.gstatic.com/lamda/images/gemini_sparkle_4g_512_lt_f94943af3be039176192d.png"
+  }
+}

@@ -35,7 +35,7 @@ export default function ProductsPage() {
           {t('productsCenter')}
         </h1>
         <p className="mx-auto max-w-2xl border-b border-line/80 pb-6 text-base text-muted sm:pb-8 sm:text-lg">
-          {t('browseProducts')}
+          {t('collectionDescription')}
         </p>
       </div>
 

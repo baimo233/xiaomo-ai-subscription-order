@@ -7,7 +7,7 @@ import { ProductDetailSkeleton } from '../components/Skeletons.jsx'
 import { useCart } from '../context/CartContext.jsx'
 import { useAuth } from '../context/AuthContext.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
-import { formatPrice, getProduct, localizeProduct } from '../data/products.js'
+import { formatPrice, getProduct, localizeProduct, isPurchasable } from '../data/products.js'
 import { useSkeleton } from '../hooks/useSkeleton.js'
 
 export default function ProductDetailPage() {
@@ -34,7 +34,10 @@ export default function ProductDetailPage() {
     )
   }
 
+  const available = isPurchasable(product)
+
   function buyNow() {
+    if (!available) return
     if (!user) {
       navigate('/login', { state: { from: `/checkout/${product.id}` } })
       return
@@ -43,6 +46,7 @@ export default function ProductDetailPage() {
   }
 
   function addToCart() {
+    if (!available) return
     if (!user) {
       navigate('/login', { state: { from: `/products/${product.id}` } })
       return
@@ -63,7 +67,7 @@ export default function ProductDetailPage() {
 
       <div className="overflow-hidden rounded-2xl bg-card shadow-[0_8px_24px_-18px_rgba(0,0,0,0.28)]">
         <div className="grid md:grid-cols-[280px_minmax(0,1fr)]">
-          <ProductCover className="min-h-[240px]" />
+          <ProductCover product={product} className="min-h-[240px]" />
           <div className="p-6 sm:p-8">
             <p className="text-[12px] text-muted">
               {t('categoryOf')} · {product.category}
@@ -79,15 +83,15 @@ export default function ProductDetailPage() {
                   {t('renewalOnly')}
                 </span>
               ) : null}
-              <span className="rounded-full bg-success/10 px-2.5 py-1 text-[12px] text-ok">{t('inStock')}</span>
+              <span className="rounded-full bg-success/10 px-2.5 py-1 text-[12px] text-ok">{available ? t('inStock') : t('comingSoon')}</span>
             </div>
 
             <div className="mt-8 flex flex-wrap items-end justify-between gap-4">
               <div>
                 <p className="text-[12px] text-muted">{t('currentPrice')}</p>
                 <p className="flex items-baseline gap-2">
-                  <span className="text-[36px] font-semibold tracking-tight">{formatPrice(product.price)}</span>
-                  <span className="text-muted">CNY</span>
+                  <span className="text-[36px] font-semibold tracking-tight">{available ? formatPrice(product.price) : t('pricePending')}</span>
+                  {available && <span className="text-muted">CNY</span>}
                 </p>
               </div>
               <div className="flex items-center gap-3">
@@ -106,16 +110,19 @@ export default function ProductDetailPage() {
               </div>
             </div>
 
+            <p className="mt-5 text-sm leading-6 text-muted">{copy.notice}</p>
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <button
                 type="button"
+                disabled={!available}
                 onClick={buyNow}
                 className="inline-flex h-11 w-full items-center justify-center rounded-xl bg-brand px-5 text-[14px] font-medium text-white hover:bg-brand-hover sm:w-auto"
               >
-                {t('buyNow')}
+                {available ? t('buyNow') : t('comingSoon')}
               </button>
               <button
                 type="button"
+                disabled={!available}
                 onClick={addToCart}
                 className="inline-flex h-11 w-full items-center justify-center rounded-xl bg-canvas px-5 text-[14px] font-medium text-ink hover:bg-soft sm:w-auto"
               >
@@ -140,7 +147,7 @@ export default function ProductDetailPage() {
           </ul>
       </section>
 
-      <NoticeDetail className="mt-5" />
+      {product.category === 'ChatGPT' ? <NoticeDetail className="mt-5" /> : <section className="mt-5 rounded-2xl bg-card p-6"><h2 className="font-semibold">{t('buyNotice')}</h2><p className="my-3 text-sm leading-7 text-muted">{copy.notice}</p><a href={product.category === 'Claude' ? 'https://www.anthropic.com/pricing' : 'https://one.google.com/about/google-ai-plans/'} target="_blank" rel="noreferrer" className="text-sm text-brand">{product.category} · {t('officialPlan')} ↗</a></section>}
     </div>
   )
 }

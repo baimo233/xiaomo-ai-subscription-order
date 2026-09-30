@@ -63,7 +63,7 @@ export default function Header() {
   }
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-card">
+    <header className="site-header fixed inset-x-0 top-0 z-50 border-b border-line">
       <div className="relative mx-auto flex h-14 max-w-[1280px] items-center justify-between gap-3 px-4 sm:px-6">
         <NavLink
           to="/"

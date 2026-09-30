@@ -27,7 +27,7 @@ export default function CartPage() {
             {rows.map(({ product, qty }) => (
               <article key={product.id} className="overflow-hidden rounded-2xl bg-card">
                 <div className="grid sm:grid-cols-[140px_minmax(0,1fr)]">
-                  <ProductCover className="min-h-[120px]" />
+                  <ProductCover product={product} className="min-h-[120px]" />
                   <div className="flex flex-col gap-3 p-5">
                     <div className="flex items-start justify-between gap-3">
                       <div>
