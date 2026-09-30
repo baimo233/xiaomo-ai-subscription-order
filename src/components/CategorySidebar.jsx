@@ -1,4 +1,4 @@
-import { ChatGPTLogo } from './ChatGPTLogo.jsx'
+import BrandMark from './BrandMark.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
 
 const CATEGORIES = [
@@ -38,9 +38,9 @@ export default function CategorySidebar({ query, onQueryChange, category, onCate
                 active ? 'bg-brand text-white' : 'text-ink hover:bg-canvas'
               }`}
             >
-              {item.id === 'ChatGPT' ? (
-                <span className={`flex h-5 w-5 items-center justify-center rounded-full ${active ? 'bg-white text-ink' : 'bg-canvas text-ink'}`}>
-                  <ChatGPTLogo className="h-3.5 w-3.5" />
+              {item.id !== 'all' ? (
+                <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-white">
+                  <BrandMark brand={item.id} className="h-4 w-4" />
                 </span>
               ) : null}
               {item.labelKey ? t(item.labelKey) : item.label}
