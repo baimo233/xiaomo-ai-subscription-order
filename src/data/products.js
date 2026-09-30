@@ -99,44 +99,43 @@ export const products = [
     "id": "chatgpt-pro-100",
     "shortName": "GPT Pro 100额度",
     "category": "ChatGPT",
-    "price": null,
+    "price": 685,
     "currency": "CNY",
-    "status": "coming-soon",
     "i18n": {
       "zh-CN": {
         "name": "GPT Pro 100额度",
         "region": "会员订阅",
         "duration": "1 个月",
-        "description": "GPT Pro 100额度套餐，价格待定，确认后开放购买。",
-        "notice": "价格待定，暂未开放购买。具体额度说明与交付方式以商品后续更新为准。",
+        "description": "GPT Pro 100额度月度套餐，适合更高强度的工作与创作。",
+        "notice": "订阅时长为 1 个月。下单前请确认账号要求和额度说明，具体使用规则以商品说明及服务商实际规则为准。",
         "features": [
           "Pro 100额度",
           "月度订阅",
-          "价格待定"
+          "下单前确认账号要求"
         ]
       },
       "zh-TW": {
         "name": "GPT Pro 100額度",
         "region": "會員訂閱",
         "duration": "1 個月",
-        "description": "GPT Pro 100額度方案，價格待定，確認後開放購買。",
-        "notice": "價格待定，暫未開放購買。具體額度說明與交付方式以商品後續更新為準。",
+        "description": "GPT Pro 100額度月度方案，適合更高強度的工作與創作。",
+        "notice": "訂閱時長為 1 個月。下單前請確認帳號要求和額度說明，具體使用規則以商品說明及服務商實際規則為準。",
         "features": [
           "Pro 100額度",
           "月度訂閱",
-          "價格待定"
+          "下單前確認帳號要求"
         ]
       },
       "en": {
         "name": "GPT Pro 100 Quota",
         "region": "Membership",
         "duration": "1 month",
-        "description": "GPT Pro 100 quota plan. Pricing is pending; orders open once confirmed.",
-        "notice": "Pricing is pending. Quota details and delivery will be specified in a future product update.",
+        "description": "GPT Pro 100 quota monthly plan for more intensive work and creation.",
+        "notice": "One-month subscription. Confirm account requirements and quota details before ordering. Usage follows the product description and provider terms.",
         "features": [
           "Pro 100 quota",
           "Monthly subscription",
-          "Pricing pending"
+          "Confirm account requirements"
         ]
       }
     }
@@ -145,44 +144,43 @@ export const products = [
     "id": "chatgpt-pro-200",
     "shortName": "GPT Pro 200额度",
     "category": "ChatGPT",
-    "price": null,
+    "price": 1200,
     "currency": "CNY",
-    "status": "coming-soon",
     "i18n": {
       "zh-CN": {
         "name": "GPT Pro 200额度",
         "region": "会员订阅",
         "duration": "1 个月",
-        "description": "GPT Pro 200额度套餐，价格待定，确认后开放购买。",
-        "notice": "价格待定，暂未开放购买。具体额度说明与交付方式以商品后续更新为准。",
+        "description": "GPT Pro 200额度月度套餐，适合更高强度的工作与创作。",
+        "notice": "订阅时长为 1 个月。下单前请确认账号要求和额度说明，具体使用规则以商品说明及服务商实际规则为准。",
         "features": [
           "Pro 200额度",
           "月度订阅",
-          "价格待定"
+          "下单前确认账号要求"
         ]
       },
       "zh-TW": {
         "name": "GPT Pro 200額度",
         "region": "會員訂閱",
         "duration": "1 個月",
-        "description": "GPT Pro 200額度方案，價格待定，確認後開放購買。",
-        "notice": "價格待定，暫未開放購買。具體額度說明與交付方式以商品後續更新為準。",
+        "description": "GPT Pro 200額度月度方案，適合更高強度的工作與創作。",
+        "notice": "訂閱時長為 1 個月。下單前請確認帳號要求和額度說明，具體使用規則以商品說明及服務商實際規則為準。",
         "features": [
           "Pro 200額度",
           "月度訂閱",
-          "價格待定"
+          "下單前確認帳號要求"
         ]
       },
       "en": {
         "name": "GPT Pro 200 Quota",
         "region": "Membership",
         "duration": "1 month",
-        "description": "GPT Pro 200 quota plan. Pricing is pending; orders open once confirmed.",
-        "notice": "Pricing is pending. Quota details and delivery will be specified in a future product update.",
+        "description": "GPT Pro 200 quota monthly plan for more intensive work and creation.",
+        "notice": "One-month subscription. Confirm account requirements and quota details before ordering. Usage follows the product description and provider terms.",
         "features": [
           "Pro 200 quota",
           "Monthly subscription",
-          "Pricing pending"
+          "Confirm account requirements"
         ]
       }
     }
@@ -191,44 +189,43 @@ export const products = [
     "id": "chatgpt-pro-500",
     "shortName": "GPT Pro 500额度",
     "category": "ChatGPT",
-    "price": null,
+    "price": 3399,
     "currency": "CNY",
-    "status": "coming-soon",
     "i18n": {
       "zh-CN": {
         "name": "GPT Pro 500额度",
         "region": "会员订阅",
         "duration": "1 个月",
-        "description": "GPT Pro 500额度套餐，价格待定，确认后开放购买。",
-        "notice": "价格待定，暂未开放购买。具体额度说明与交付方式以商品后续更新为准。",
+        "description": "GPT Pro 500额度月度套餐，适合更高强度的工作与创作。",
+        "notice": "订阅时长为 1 个月。下单前请确认账号要求和额度说明，具体使用规则以商品说明及服务商实际规则为准。",
         "features": [
           "Pro 500额度",
           "月度订阅",
-          "价格待定"
+          "下单前确认账号要求"
         ]
       },
       "zh-TW": {
         "name": "GPT Pro 500額度",
         "region": "會員訂閱",
         "duration": "1 個月",
-        "description": "GPT Pro 500額度方案，價格待定，確認後開放購買。",
-        "notice": "價格待定，暫未開放購買。具體額度說明與交付方式以商品後續更新為準。",
+        "description": "GPT Pro 500額度月度方案，適合更高強度的工作與創作。",
+        "notice": "訂閱時長為 1 個月。下單前請確認帳號要求和額度說明，具體使用規則以商品說明及服務商實際規則為準。",
         "features": [
           "Pro 500額度",
           "月度訂閱",
-          "價格待定"
+          "下單前確認帳號要求"
         ]
       },
       "en": {
         "name": "GPT Pro 500 Quota",
         "region": "Membership",
         "duration": "1 month",
-        "description": "GPT Pro 500 quota plan. Pricing is pending; orders open once confirmed.",
-        "notice": "Pricing is pending. Quota details and delivery will be specified in a future product update.",
+        "description": "GPT Pro 500 quota monthly plan for more intensive work and creation.",
+        "notice": "One-month subscription. Confirm account requirements and quota details before ordering. Usage follows the product description and provider terms.",
         "features": [
           "Pro 500 quota",
           "Monthly subscription",
-          "Pricing pending"
+          "Confirm account requirements"
         ]
       }
     }

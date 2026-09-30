@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useOutletContext } from 'react-router-dom'
 import CategorySidebar from '../components/CategorySidebar.jsx'
+import PromotionCarousel from '../components/PromotionCarousel.jsx'
 import ProductCard from '../components/ProductCard.jsx'
 import { ProductsPageSkeleton } from '../components/Skeletons.jsx'
 import { useSettings } from '../context/SettingsContext.jsx'
@@ -39,6 +40,7 @@ export default function ProductsPage() {
         </p>
       </div>
 
+      <PromotionCarousel />
       <div className="flex flex-col gap-8 lg:flex-row">
         <CategorySidebar
           query={query}

@@ -1,3 +1,5 @@
+import { usePromotions } from '../hooks/usePromotions.js'
+import OfferLabel from '../components/OfferLabel.jsx'
 import { Link } from 'react-router-dom'
 import ProductCover from '../components/ProductCover.jsx'
 import { useCart } from '../context/CartContext.jsx'
@@ -7,6 +9,7 @@ import { formatPrice, getProduct, localizeProduct } from '../data/products.js'
 export default function CartPage() {
   const { items, total, setQty, removeItem, clear } = useCart()
   const { t, locale } = useSettings()
+  const { pricing } = usePromotions()
   const rows = items
     .map((item) => ({ ...item, product: localizeProduct(getProduct(item.id), locale) }))
     .filter((item) => item.product)
@@ -46,10 +49,10 @@ export default function CartPage() {
                       </button>
                     </div>
                     <div className="mt-auto flex items-center justify-between">
-                      <p className="text-[18px] font-semibold">
-                        {formatPrice(product.price)}
+                      <div><OfferLabel product={product} /><p className="text-[18px] font-semibold">
+                        {formatPrice(pricing(product).price)}
                         <span className="ml-1 text-[12px] font-normal text-muted">CNY</span>
-                      </p>
+                      </p></div>
                       <input
                         type="number"
                         min="1"

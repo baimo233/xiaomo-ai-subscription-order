@@ -1,3 +1,4 @@
+import { usePromotions } from '../hooks/usePromotions.js'
 import { createContext, useContext, useMemo, useState } from 'react'
 import { getProduct, isPurchasable } from '../data/products.js'
 
@@ -16,6 +17,7 @@ const CartContext = createContext(null)
 
 export function CartProvider({ children }) {
   const [items, setItems] = useState(readCart)
+  const { pricing } = usePromotions()
 
   function persist(next) {
     setItems(next)
@@ -26,7 +28,7 @@ export function CartProvider({ children }) {
     const count = items.reduce((sum, item) => sum + item.qty, 0)
     const total = items.reduce((sum, item) => {
       const product = getProduct(item.id)
-      return sum + (product ? product.price * item.qty : 0)
+      return sum + (product ? pricing(product).price * item.qty : 0)
     }, 0)
 
     return {
@@ -55,7 +57,7 @@ export function CartProvider({ children }) {
         persist([])
       },
     }
-  }, [items])
+  }, [items, pricing])
 
   return <CartContext.Provider value={api}>{children}</CartContext.Provider>
 }

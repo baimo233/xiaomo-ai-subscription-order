@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import ProductCard from '../components/ProductCard.jsx'
+import PromotionCarousel from '../components/PromotionCarousel.jsx'
 import BrandMark from '../components/BrandMark.jsx'
 import Reveal from '../components/Reveal.jsx'
 import { IconArrowRight } from '../components/Icons.jsx'
@@ -22,6 +23,7 @@ export default function HomePage() {
     event.currentTarget.style.setProperty('--pointer-y', `${(event.clientY - box.top) / box.height * 100}%`)
   }
   return <div className="storefront">
+    <PromotionCarousel />
     <section className="hero-shell" onPointerMove={moveLight}>
       <div className="hero-copy">
         <p className="hero-eyebrow"><span /> XIAOMO LAB / AI MEMBERSHIPS</p>

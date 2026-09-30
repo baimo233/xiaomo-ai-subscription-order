@@ -1,4 +1,7 @@
-import { useMemo, useState } from 'react'
+import { getPricing } from '../data/promotions.js'
+import { usePromotions } from '../hooks/usePromotions.js'
+import OfferLabel from '../components/OfferLabel.jsx'
+import { useState } from 'react'
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
 import { IconChevron, IconHome } from '../components/Icons.jsx'
 import ProductCover from '../components/ProductCover.jsx'
@@ -15,6 +18,7 @@ export default function CheckoutPage() {
   const { id } = useParams()
   const product = getProduct(id)
   const { t, locale } = useSettings()
+  const { pricing } = usePromotions()
   const copy = localizeProduct(product, locale)
   const location = useLocation()
   const navigate = useNavigate()
@@ -30,7 +34,7 @@ export default function CheckoutPage() {
     { id: 'alipay', label: t('alipay') },
   ]
 
-  const total = useMemo(() => (product ? product.price * qty : 0), [product, qty])
+  const total = product ? Math.round(pricing(product).price * qty * 100) / 100 : 0
 
   if (!product) {
     return (
@@ -52,7 +56,15 @@ export default function CheckoutPage() {
       setError(t('fillRequired'))
       return
     }
+    const confirmed = getPricing(product, Date.now())
+    if (confirmed.price !== pricing(product).price) {
+      setError(t('offerChanged'))
+      return
+    }
     const order = {
+      unitPrice: confirmed.price,
+      originalUnitPrice: confirmed.originalPrice,
+      campaignId: confirmed.campaign?.id || null,
       id: createOrderId(),
       productId: product.id,
       name: copy.name,
@@ -92,8 +104,8 @@ export default function CheckoutPage() {
                 {product.renewalOnly ? (
                   <p className="mt-2 text-[13px] font-medium text-warn">{t('renewalOnly')}</p>
                 ) : null}
-                <p className="mt-4 text-[22px] font-semibold">
-                  {formatPrice(product.price)}
+                <OfferLabel product={product} /><p className="mt-4 text-[22px] font-semibold">
+                  {formatPrice(pricing(product).price)}
                   <span className="ml-1 text-[13px] font-normal text-muted">CNY</span>
                 </p>
               </div>

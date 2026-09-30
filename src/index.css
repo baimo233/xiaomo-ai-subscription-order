@@ -329,3 +329,69 @@ html.dark .cover-chatgpt, html.dark .cover-claude, html.dark .cover-gemini { bac
   .category-option > span { width: 20px; height: 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .mobile-settings-sheet[open] { animation: none; } }
+
+/* Campaign board: a membership ticket with a quiet control rail. */
+.promotion-carousel { margin: 0 0 32px; border: 1px solid var(--color-line); border-radius: 24px; overflow: hidden; background: var(--color-card); }
+.promotion-slide { display: grid; grid-template-columns: 1.25fr 1fr; min-height: 270px; animation: campaign-in .45s ease; }
+.promotion-pro { background: #142c48; color: #f2f8ff; --campaign-accent: #b9eadc; }
+.promotion-holiday { background: #fff6dd; color: #4d3918; --campaign-accent: #795918; }
+.promotion-copy { padding: 32px 40px; }
+.promotion-tag { display: flex; gap: 8px; align-items: center; font-size: 11px; letter-spacing: .12em; font-weight: 600; color: var(--campaign-accent); }
+.promotion-tag > span { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.promotion-copy h2 { margin: 14px 0 12px; font-size: clamp(24px,3vw,38px); line-height: 1.25; letter-spacing: -.04em; font-weight: 700; }
+.promotion-description { max-width: 460px; font-size: 14px; line-height: 1.85; opacity: .75; }
+.promotion-cta { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 44px; margin-top: 18px; border-bottom: 1px solid currentColor; color: var(--campaign-accent); font-size: 13px; font-weight: 600; }
+.promotion-cta:hover span { transform: translate(2px,-2px); }
+.promotion-cta span { transition: transform .2s; font-size: 20px; }
+.promotion-art { position: relative; display: flex; flex-direction: column; justify-content: center; padding: 24px 40px; border-left: 1px dashed #ffffff30; overflow: hidden; }
+.promotion-brand { position: absolute; right: 36px; top: 28px; background: white; padding: 9px; border-radius: 14px; }
+.promotion-brand img { width: 30px; height: 30px; }
+.promotion-art-title { font-size: 76px; line-height: 1; letter-spacing: -.07em; font-weight: 800; color: #b9eadc; }
+.quota-tickets { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 22px; }
+.quota-tickets > div { border-top: 1px solid #ffffff44; padding-top: 12px; }
+.quota-tickets strong { display: block; font-size: 26px; letter-spacing: -.04em; }
+.quota-tickets span { font-size: 13px; color: #b9eadc; font-family: ui-monospace, monospace; }
+.promotion-holiday .promotion-art { border-color: #79591833; align-items: center; }
+.holiday-caption { font-size: 10px; letter-spacing: .24em; }
+.holiday-date { font-size: 72px; letter-spacing: -.06em; font-weight: 700; line-height: 1.5; }
+.holiday-date > span { font-weight: 300; color: #b19a66; }
+.holiday-brands { display: flex; gap: 12px; }
+.holiday-brands > span { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: white; box-shadow: 0 3px 10px #7959180c; }
+.holiday-brands img { width: 26px; height: 26px; }
+.promotion-controls { display: flex; align-items: center; justify-content: space-between; padding: 2px 20px; min-height: 48px; }
+.promotion-dots, .promotion-arrows { display: flex; align-items: center; gap: 2px; }
+.promotion-controls button { display: flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; font-size: 17px; color: var(--color-muted); }
+.promotion-controls button:hover { background: var(--color-canvas); }
+.promotion-dots button { width: 28px; }
+.promotion-dots span { display: block; height: 5px; width: 5px; border-radius: 10px; background: var(--color-line); transition: width .2s; }
+.promotion-dots [aria-pressed=true] span { width: 20px; background: var(--color-brand); }
+.promotion-position { font: 10px ui-monospace,monospace; color: var(--color-muted); margin-right: 12px; }
+.promotion-countdown { margin-top: 10px; font-size: 12px; }
+.promotion-schedule { margin-top: 8px; font-size: 11px; opacity: .75; }
+.promotion-countdown time { font-family: ui-monospace,monospace; font-weight: 600; margin-left: 8px; }
+.offer-label { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 8px; font-size: 11px; color: var(--color-muted); margin: 8px 0; }
+.offer-label > span:first-child { background: var(--color-brand); color: white; border-radius: 5px; padding: 2px 6px; }
+.offer-label > span:last-child { color: var(--color-brand); }
+@keyframes campaign-in { from { opacity: .5; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+@media (max-width: 639px) {
+  .promotion-carousel { border-radius: 20px; margin-bottom: 24px; }
+  .promotion-slide { grid-template-columns: 1fr; min-height: 300px; }
+  .promotion-copy { padding: 22px 22px 12px; }
+  .promotion-copy h2 { font-size: 27px; margin-top: 12px; }
+  .promotion-description { font-size: 12px; min-height: 44px; }
+  .promotion-cta { margin-top: 8px; }
+  .promotion-art { padding: 12px 22px 22px; border-left: 0; }
+  .promotion-art-title { display: none; }
+  .promotion-brand { display: none; }
+  .quota-tickets { margin-top: 0; }
+  .quota-tickets strong { font-size: 24px; }
+  .promotion-holiday .promotion-art { align-items: stretch; flex-direction: row; justify-content: space-between; gap: 10px; align-items: center; }
+  .holiday-caption { display: none; }
+  .holiday-date { font-size: 42px; }
+  .holiday-brands { gap: 6px; }
+  .holiday-brands > span { width: 32px; height: 32px; border-radius: 9px; }
+  .holiday-brands img { width: 21px; height: 21px; }
+  .promotion-controls { padding: 0 12px; }
+  .promotion-position { margin-right: 2px; }
+}
+@media (prefers-reduced-motion: reduce) { .promotion-slide { animation: none; } }

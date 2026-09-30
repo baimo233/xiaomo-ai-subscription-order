@@ -1,0 +1,72 @@
+// All timestamps include the China time zone. End times are exclusive.
+// Keep unconfirmed discounts disabled; set exact sale prices before enabling.
+export const campaigns = [
+  {
+    id: 'pro-launch', enabled: true, tone: 'pro', href: '/products/chatgpt-pro-100',
+    i18n: {
+      'zh-CN': { tag: 'PRO 系列 · 新方案', title: '更高额度，更多可能。', description: '100 / 200 / 500 额度现已上线，按工作强度选择你的 Pro。', action: '查看 Pro 方案' },
+      'zh-TW': { tag: 'PRO 系列 · 新方案', title: '更高額度，更多可能。', description: '100 / 200 / 500 額度現已上線，按工作強度選擇你的 Pro。', action: '查看 Pro 方案' },
+      en: { tag: 'PRO COLLECTION · NEW', title: 'More room for your ideas.', description: '100 / 200 / 500 quota plans are here. Choose your Pro.', action: 'Explore Pro plans' },
+    },
+  },
+  {
+    id: 'national-day-preview', enabled: true, tone: 'holiday', href: '/products',
+    annual: { start: '09-30', end: '10-08' },
+    i18n: {
+      'zh-CN': { tag: '国庆活动 · 预告', title: '给灵感，放个好假。', description: '国庆优惠准备中，活动每年 10 月 1 日至 7 日，具体优惠确认后公布。', action: '浏览会员商品' },
+      'zh-TW': { tag: '國慶活動 · 預告', title: '給靈感，放個好假。', description: '國慶優惠準備中，活動每年 10 月 1 日至 7 日，具體優惠確認後公布。', action: '瀏覽會員商品' },
+      en: { tag: 'NATIONAL DAY · PREVIEW', title: 'A little break. A new idea.', description: 'Holiday offers are being prepared. Runs October 1–7 each year. Sale prices will be announced once confirmed.', action: 'Browse memberships' },
+    },
+  },
+  {
+    id: 'national-day-sale', enabled: false, tone: 'holiday', href: '/products',
+    annual: { start: '10-01', end: '10-08' },
+    // Example shape: 'chatgpt-plus': 125. Use only confirmed prices.
+    salePrices: {},
+    i18n: {
+      'zh-CN': { tag: '国庆活动 · 限时优惠', title: '假期好价，灵感不停。', description: '参与活动的套餐已标注优惠价，截止时间内下单享活动价格。', action: '查看活动商品' },
+      'zh-TW': { tag: '國慶活動 · 限時優惠', title: '假期好價，靈感不停。', description: '參與活動的方案已標註優惠價，截止時間內下單享活動價格。', action: '查看活動商品' },
+      en: { tag: 'NATIONAL DAY · LIMITED OFFER', title: 'Holiday prices. Fresh ideas.', description: 'Participating plans show their sale prices. Order before the offer ends.', action: 'Shop the offers' },
+    },
+  },
+]
+
+export function getCampaignWindow(campaign, now = Date.now()) {
+  if (campaign.annual) {
+    let year = new Date(now + 8 * 3600_000).getUTCFullYear()
+    const { start, end } = campaign.annual
+    const crossesYear = end <= start
+    if (crossesYear && now < Date.parse(`${year}-${start}T00:00:00+08:00`)) year -= 1
+    return {
+      start: Date.parse(`${year}-${start}T00:00:00+08:00`),
+      end: Date.parse(`${year + (crossesYear ? 1 : 0)}-${end}T00:00:00+08:00`),
+    }
+  }
+  return {
+    start: campaign.startsAt ? Date.parse(campaign.startsAt) : -Infinity,
+    end: campaign.endsAt ? Date.parse(campaign.endsAt) : Infinity,
+  }
+}
+
+export function isCampaignActive(campaign, now = Date.now()) {
+  if (!campaign.enabled) return false
+  const { start, end } = getCampaignWindow(campaign, now)
+  return now >= start && now < end
+}
+
+export function getPricing(product, now = Date.now(), source = campaigns) {
+  const originalPrice = product?.price ?? null
+  let price = originalPrice
+  let campaign = null
+  if (Number.isFinite(price) && price > 0 && product.status !== 'coming-soon') {
+    for (const offer of source) {
+      const sale = offer.salePrices?.[product.id]
+      const rounded = Math.round(sale * 100) / 100
+      if (isCampaignActive(offer, now) && Number.isFinite(sale) && rounded > 0 && rounded < price) {
+        price = rounded
+        campaign = offer
+      }
+    }
+  }
+  return { price, originalPrice, campaign, saving: campaign ? Math.round((originalPrice - price) * 100) / 100 : 0 }
+}

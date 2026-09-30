@@ -1,3 +1,5 @@
+import { usePromotions } from '../hooks/usePromotions.js'
+import OfferLabel from '../components/OfferLabel.jsx'
 import { useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
 import { IconCheck, IconChevron, IconHome } from '../components/Icons.jsx'
@@ -16,6 +18,7 @@ export default function ProductDetailPage() {
   const { addItem } = useCart()
   const { user } = useAuth()
   const { t, locale } = useSettings()
+  const { pricing } = usePromotions()
   const copy = localizeProduct(product, locale)
   const navigate = useNavigate()
   const [qty, setQty] = useState(1)
@@ -88,9 +91,9 @@ export default function ProductDetailPage() {
 
             <div className="mt-8 flex flex-wrap items-end justify-between gap-4">
               <div>
-                <p className="text-[12px] text-muted">{t('currentPrice')}</p>
+                <OfferLabel product={product} /><p className="text-[12px] text-muted">{t('currentPrice')}</p>
                 <p className="flex items-baseline gap-2">
-                  <span className="text-[36px] font-semibold tracking-tight">{available ? formatPrice(product.price) : t('pricePending')}</span>
+                  <span className="text-[36px] font-semibold tracking-tight">{available ? formatPrice(pricing(product).price) : t('pricePending')}</span>
                   {available && <span className="text-muted">CNY</span>}
                 </p>
               </div>
