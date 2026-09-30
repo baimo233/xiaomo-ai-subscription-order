@@ -280,13 +280,13 @@ export const products = [
   },
   {
     "id": "claude-max-100",
-    "shortName": "Claude Max 5x CDK直充",
+    "shortName": "Claude Max 5x",
     "category": "Claude",
     "price": 879,
     "currency": "CNY",
     "i18n": {
       "zh-CN": {
-        "name": "iOS Claude Max 5x CDK直充",
+        "name": "Claude Max 5x",
         "region": "iOS 正规充值",
         "duration": "CDK 永久有效",
         "description": "正规iOS充值，无需上号，使用Claude ID即可充值。质保不掉订阅，封号无售后。",
@@ -302,7 +302,7 @@ export const products = [
         ]
       },
       "zh-TW": {
-        "name": "iOS Claude Max 5x CDK直充",
+        "name": "Claude Max 5x",
         "region": "iOS 正規儲值",
         "duration": "CDK 永久有效",
         "description": "正規iOS儲值，無需登入帳號，使用Claude ID即可儲值。質保不掉訂閱，封號無售後。",
@@ -318,7 +318,7 @@ export const products = [
         ]
       },
       "en": {
-        "name": "iOS Claude Max 5x CDK Top-up",
+        "name": "Claude Max 5x",
         "region": "iOS top-up",
         "duration": "CDK does not expire",
         "description": "Official iOS top-up using your Claude ID, without account login. Subscription loss is covered; account bans have no after-sales support.",
