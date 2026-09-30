@@ -14,6 +14,6 @@ npm run build
 
 图标直接来自品牌官方网站，原始来源记录在 `public/brands/sources.json`。图标保留官方颜色。
 
-Claude Pro 和 Gemini（Google AI Pro）月度订阅已加入商品目录；售价和交付方式待确认，暂不开放下单。
+ChatGPT Plus 售价 135 元，Claude Pro 售价 155 元。GPT Pro 100、200、500 额度和 Gemini（Google AI Pro）价格待定，暂不开放下单。
 
 GitHub Pages 使用 `gh-pages` 分支根目录发布构建产物。站点为前端演示，提交订单不会真实扣款。
