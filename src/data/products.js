@@ -234,46 +234,55 @@ export const products = [
     "id": "claude-pro",
     "shortName": "Claude Pro",
     "category": "Claude",
-    "price": 155,
+    "price": 159,
     "currency": "CNY",
     "i18n": {
       "zh-CN": {
         "name": "Claude Pro 会员",
-        "region": "会员订阅",
+        "region": "iOS 渠道充值",
         "duration": "1 个月",
-        "description": "Claude Pro 月度订阅，为日常工作、学习与创作提供更多可能。",
-        "notice": "订阅时长为 1 个月。下单前请确认账号及地区资格，具体权益与使用额度以服务商实际规则为准。",
+        "description": "Claude Pro 月度会员，iOS 渠道充值，仅需提交 Claude ID。货源紧张，建议尽量下午交易，晚上可能无法正常补货。",
+        "notice": "通过 iOS 渠道充值，只需提交 Claude ID 即可。货源比较紧张，如需购买，建议尽量在下午交易；晚上可能无法正常补货。订阅时长为 1 个月。下单前请确认账号及地区资格，具体权益与使用额度以服务商实际规则为准。",
         "features": [
           "写作与分析",
           "代码协作",
           "项目工作区",
-          "月度订阅"
+          "月度订阅",
+          "iOS 渠道充值",
+          "仅需提交 Claude ID",
+          "货源紧张，建议尽量下午交易；晚上可能无法正常补货"
         ]
       },
       "zh-TW": {
         "name": "Claude Pro 會員",
-        "region": "會員訂閱",
+        "region": "iOS 管道儲值",
         "duration": "1 個月",
-        "description": "Claude Pro 月度訂閱，為日常工作、學習與創作提供更多可能。",
-        "notice": "訂閱時長為 1 個月。下單前請確認帳號及地區資格，具體權益與使用額度以服務商實際規則為準。",
+        "description": "Claude Pro 月度會員，iOS 管道儲值，僅需提供 Claude ID。貨源緊張，建議盡量下午交易，晚上可能無法正常補貨。",
+        "notice": "透過 iOS 管道儲值，只需提供 Claude ID 即可。貨源比較緊張，如需購買，建議盡量在下午交易；晚上可能無法正常補貨。訂閱時長為 1 個月。下單前請確認帳號及地區資格，具體權益與使用額度以服務商實際規則為準。",
         "features": [
           "寫作與分析",
           "程式碼協作",
           "專案工作區",
-          "月度訂閱"
+          "月度訂閱",
+          "iOS 管道儲值",
+          "僅需提供 Claude ID",
+          "貨源緊張，建議盡量下午交易；晚上可能無法正常補貨"
         ]
       },
       "en": {
         "name": "Claude Pro Membership",
-        "region": "Membership",
+        "region": "iOS top-up",
         "duration": "1 month",
-        "description": "Claude Pro monthly membership for work, learning and creation.",
-        "notice": "One-month subscription. Check account and regional eligibility before ordering. Benefits and usage limits follow the provider’s current terms.",
+        "description": "Claude Pro monthly membership via the iOS channel. Only your Claude ID is needed. Supply is limited; afternoon purchases are recommended, as restocking may not be available at night.",
+        "notice": "Top-up is handled through the iOS channel; only your Claude ID is required. Supply is limited, so please try to purchase in the afternoon. Normal restocking may not be possible at night. One-month subscription. Check account and regional eligibility before ordering. Benefits and usage limits follow the provider’s current terms.",
         "features": [
           "Writing & analysis",
           "Coding collaboration",
           "Project workspace",
-          "Monthly subscription"
+          "Monthly subscription",
+          "Top-up through the iOS channel",
+          "Only your Claude ID is required",
+          "Limited supply; afternoon purchases recommended, with restocking possibly unavailable at night"
         ]
       }
     }
