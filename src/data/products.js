@@ -289,57 +289,54 @@ export const products = [
   },
   {
     "id": "claude-max-100",
-    "shortName": "Claude Max 5x",
+    "shortName": "Claude Max 5X",
     "category": "Claude",
-    "price": 879,
+    "price": 799,
     "currency": "CNY",
     "i18n": {
       "zh-CN": {
-        "name": "Claude Max 5x",
-        "region": "iOS 正规充值",
-        "duration": "CDK 永久有效",
-        "description": "正规iOS充值，无需上号，使用Claude ID即可充值。质保不掉订阅，封号无售后。",
-        "notice": "只质保订阅，封号不质保，秒封也不管，这都是环境问题。V封号99%的原因是由于Claude普号本身的问题，无售后。常见封号原因：频繁变动IP。站点有图文教程（强烈建议小白先看再食用）。如遇充值失败，过一会再提交即可或联系客服。",
+        "name": "Claude Max 5X",
+        "region": "美区卡付",
+        "duration": "1 个月",
+        "description": "Claude Max 5X 一个月原账号代充，美区卡付，按指引提交 sessionKey。须已完成 KYC，且当前为无有效付费订阅的免费版账号。仅质保订阅，封号不质保、不退款，秒封也不保。",
+        "notice": "必须已完成 Claude KYC，使用可正常登录、当前无有效付费订阅的免费版账号；不提供成品账号、注册或 KYC 代认证服务。仅质保订阅，封号或停用不退款、不补偿，秒封也不保。请先阅读下方充值条件与售后说明。",
         "features": [
-          "Claude Max 5x CDK直充",
-          "正规iOS充值，无需上号，使用Claude ID即可充值",
-          "支持安卓、支持iOS，放心购买",
-          "CDK永久有效，无到期时间",
-          "未使用卡密永久有效，不会过期",
-          "只要有卡密，24小时都可自助充值",
-          "质保不掉订阅，封号无售后"
+          "Claude Max 5X 一个月订阅",
+          "美区卡付 · 原账号代充",
+          "须已完成 KYC，且当前为无有效付费订阅的免费版账号",
+          "按实际发货指引，在可信的充值页面提交 sessionKey",
+          "仅质保订阅；符合条件的异常掉订阅按剩余质保天数退款，扣除该部分 25% 手续费",
+          "封号不质保、不退款，秒封也不保"
         ]
       },
       "zh-TW": {
-        "name": "Claude Max 5x",
-        "region": "iOS 正規儲值",
-        "duration": "CDK 永久有效",
-        "description": "正規iOS儲值，無需登入帳號，使用Claude ID即可儲值。質保不掉訂閱，封號無售後。",
-        "notice": "只質保訂閱，封號不質保，秒封也不管，這都是環境問題。V封號99%的原因是由於Claude普號本身的問題，無售後。常見封號原因：頻繁變動IP。站點有圖文教學（強烈建議新手先看再使用）。如遇儲值失敗，稍後再提交即可或聯絡客服。",
+        "name": "Claude Max 5X",
+        "region": "美區卡付",
+        "duration": "1 個月",
+        "description": "Claude Max 5X 一個月原帳號代儲，美區卡付，依指引提供 sessionKey。須已完成 KYC，且目前為無有效付費訂閱的免費版帳號。僅質保訂閱，封號不質保、不退款，秒封也不保。",
+        "notice": "必須已完成 Claude KYC，使用可正常登入、目前無有效付費訂閱的免費版帳號；不提供成品帳號、註冊或 KYC 代認證服務。僅質保訂閱，封號或停用不退款、不補償，秒封也不保。請先閱讀下方儲值條件與售後說明。",
         "features": [
-          "Claude Max 5x CDK直充",
-          "正規iOS儲值，無需登入帳號，使用Claude ID即可儲值",
-          "支援Android、支援iOS，放心購買",
-          "CDK永久有效，無到期時間",
-          "未使用卡密永久有效，不會過期",
-          "只要有卡密，24小時都可自助儲值",
-          "質保不掉訂閱，封號無售後"
+          "Claude Max 5X 一個月訂閱",
+          "美區卡付 · 原帳號代儲",
+          "須已完成 KYC，且目前為無有效付費訂閱的免費版帳號",
+          "依實際發貨指引，在可信的儲值頁面提供 sessionKey",
+          "僅質保訂閱；符合條件的異常掉訂閱依剩餘質保天數退款，扣除該部分 25% 手續費",
+          "封號不質保、不退款，秒封也不保"
         ]
       },
       "en": {
-        "name": "Claude Max 5x",
-        "region": "iOS top-up",
-        "duration": "CDK does not expire",
-        "description": "Official iOS top-up using your Claude ID, without account login. Subscription loss is covered; account bans have no after-sales support.",
-        "notice": "Only subscriptions are covered; account bans, including immediate bans, have no after-sales support. The listing attributes bans to the account environment and 99% of V bans to the underlying Claude account. Frequent IP changes are listed as a common cause. Read the illustrated site tutorial before using the code. If a top-up fails, try again later or contact support.",
+        "name": "Claude Max 5X",
+        "region": "US card payment",
+        "duration": "1 month",
+        "description": "One month of Claude Max 5X on your existing account, paid with a US card. Follow the delivery instructions to submit sessionKey. Requires completed KYC and a free account with no active paid subscription. Only the subscription is covered; bans, including immediate bans, are not refundable.",
+        "notice": "Requires completed Claude KYC and a working free account with no active paid subscription. No ready-made account, registration or KYC service is included. Only the subscription is covered. Bans or suspension, including immediate bans, are not refundable or compensated. Read the top-up conditions and after-sales terms below.",
         "features": [
-          "Claude Max 5x CDK top-up",
-          "iOS top-up using Claude ID; no account login required",
-          "Supports Android and iOS",
-          "CDK has no expiration date",
-          "Unused codes remain valid permanently",
-          "Self-service top-up with your code, available 24 hours a day",
-          "Subscription loss is covered; account bans have no after-sales support"
+          "One-month Claude Max 5X subscription",
+          "US card payment on your existing account",
+          "Completed KYC and a free account with no active paid subscription required",
+          "Submit sessionKey only on the trusted top-up page specified in delivery instructions",
+          "Eligible subscription loss is refunded for remaining warranty days, less a 25% fee on that portion",
+          "Bans, including immediate bans, are not covered or refundable"
         ]
       }
     }

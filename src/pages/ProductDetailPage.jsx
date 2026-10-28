@@ -5,6 +5,7 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import { IconCheck, IconChevron, IconHome } from '../components/Icons.jsx'
 import NoticeDetail from '../components/NoticeDetail.jsx'
 import ClaudePurchaseNotice from '../components/ClaudePurchaseNotice.jsx'
+import ClaudeMaxTerms from '../components/ClaudeMaxTerms.jsx'
 import ProductCover from '../components/ProductCover.jsx'
 import { ProductDetailSkeleton } from '../components/Skeletons.jsx'
 import { useCart } from '../context/CartContext.jsx'
@@ -151,6 +152,8 @@ export default function ProductDetailPage() {
             ))}
           </ul>
       </section>
+
+      {product.id === 'claude-max-100' && <ClaudeMaxTerms className="mt-5" />}
 
       {product.category === 'Claude' && <ClaudePurchaseNotice className="mt-5" />}
 
