@@ -6,6 +6,7 @@ import { IconCheck, IconChevron, IconHome } from '../components/Icons.jsx'
 import NoticeDetail from '../components/NoticeDetail.jsx'
 import ClaudePurchaseNotice from '../components/ClaudePurchaseNotice.jsx'
 import ClaudeMaxTerms from '../components/ClaudeMaxTerms.jsx'
+import GeminiUltraDetails from '../components/GeminiUltraDetails.jsx'
 import ProductCover from '../components/ProductCover.jsx'
 import { ProductDetailSkeleton } from '../components/Skeletons.jsx'
 import { useCart } from '../context/CartContext.jsx'
@@ -139,25 +140,31 @@ export default function ProductDetailPage() {
         </div>
       </div>
 
-      <section className="glass-panel mt-5 rounded-2xl bg-card p-6">
-          <h2 className="text-[16px] font-semibold">{t('planInfo')}</h2>
-          <ul className="mt-4 space-y-3">
-            {copy.features.map((feature) => (
-              <li key={feature} className="flex items-center gap-2 text-[14px] text-muted">
-                <span className="flex h-5 w-5 items-center justify-center rounded-full bg-success/10 text-ok">
-                  <IconCheck />
-                </span>
-                {feature}
-              </li>
-            ))}
-          </ul>
-      </section>
+      {product.id === 'gemini-pro' ? (
+        <GeminiUltraDetails verificationNotice={copy.notice} />
+      ) : (
+        <>
+          <section className="glass-panel mt-5 rounded-2xl bg-card p-6">
+            <h2 className="text-[16px] font-semibold">{t('planInfo')}</h2>
+            <ul className="mt-4 space-y-3">
+              {copy.features.map((feature) => (
+                <li key={feature} className="flex items-center gap-2 text-[14px] text-muted">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-full bg-success/10 text-ok">
+                    <IconCheck />
+                  </span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </section>
 
-      {product.id === 'claude-max-100' && <ClaudeMaxTerms className="mt-5" />}
+          {product.id === 'claude-max-100' && <ClaudeMaxTerms className="mt-5" />}
 
-      {product.category === 'Claude' && <ClaudePurchaseNotice className="mt-5" />}
+          {product.category === 'Claude' && <ClaudePurchaseNotice className="mt-5" />}
 
-      {product.category === 'ChatGPT' && available ? <NoticeDetail className="mt-5" /> : <section className="glass-panel mt-5 rounded-2xl bg-card p-6"><h2 className="font-semibold">{t('buyNotice')}</h2><p className="my-3 text-sm leading-7 text-muted">{copy.notice}</p><a href={product.category === 'ChatGPT' ? 'https://chatgpt.com/pricing' : product.category === 'Codex' ? 'https://openai.com/codex/' : product.category === 'Claude' ? 'https://www.anthropic.com/pricing' : product.category === 'X-Twitter' ? 'https://help.x.com/en/using-x/x-premium' : 'https://one.google.com/about/google-ai-plans/'} target="_blank" rel="noreferrer" className="text-sm text-brand">{product.category} · {t('officialPlan')} ↗</a></section>}
+          {product.category === 'ChatGPT' && available ? <NoticeDetail className="mt-5" /> : <section className="glass-panel mt-5 rounded-2xl bg-card p-6"><h2 className="font-semibold">{t('buyNotice')}</h2><p className="my-3 text-sm leading-7 text-muted">{copy.notice}</p><a href={product.category === 'ChatGPT' ? 'https://chatgpt.com/pricing' : product.category === 'Codex' ? 'https://openai.com/codex/' : product.category === 'Claude' ? 'https://www.anthropic.com/pricing' : product.category === 'X-Twitter' ? 'https://help.x.com/en/using-x/x-premium' : 'https://one.google.com/about/google-ai-plans/'} target="_blank" rel="noreferrer" className="text-sm text-brand">{product.category} · {t('officialPlan')} ↗</a></section>}
+        </>
+      )}
     </div>
   )
 }
