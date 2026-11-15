@@ -123,6 +123,7 @@ export default function CheckoutPage() {
                   {formatPrice(pricing(product).price)}
                   <span className="ml-1 text-[13px] font-normal text-muted">CNY</span>
                 </p>
+                {product.id === 'gemini-pro' && <p className="mt-2 text-sm leading-6 text-warn">{copy.notice}</p>}
               </div>
             </div>
           </section>

@@ -343,49 +343,42 @@ export const products = [
   },
   {
     "id": "gemini-pro",
-    "shortName": "Gemini · Google AI Pro",
+    "shortName": "Gemini Ultra 20X",
     "category": "Gemini",
-    "price": null,
+    "price": 599,
     "currency": "CNY",
-    "status": "coming-soon",
     "i18n": {
       "zh-CN": {
-        "name": "Gemini · Google AI Pro 会员",
-        "region": "会员订阅",
+        "name": "Gemini Ultra 20X（iOS 渠道成品号）",
+        "region": "iOS 渠道",
         "duration": "1 个月",
-        "description": "Gemini · Google AI Pro 月度订阅，为日常工作、学习与创作提供更多可能。售价及交付方式确认后开放购买。",
-        "notice": "售价及交付方式待确认，暂未开放购买。权益、额度和地区资格以服务商实际规则为准。",
+        "description": "交付已开通 1 个月订阅的成品账号。",
+        "notice": "谷歌反重力（Google Antigravity）需由买家自行验证。",
         "features": [
-          "多模态创作",
-          "深度研究",
-          "Google AI 体验",
-          "月度订阅"
+          "Gemini Ultra 20X 月度订阅",
+          "通过 iOS 渠道开通，交付成品账号"
         ]
       },
       "zh-TW": {
-        "name": "Gemini · Google AI Pro 會員",
-        "region": "會員訂閱",
+        "name": "Gemini Ultra 20X（iOS 管道成品帳號）",
+        "region": "iOS 管道",
         "duration": "1 個月",
-        "description": "Gemini · Google AI Pro 月度訂閱，為日常工作、學習與創作提供更多可能。售價及交付方式確認後開放購買。",
-        "notice": "售價及交付方式待確認，暫未開放購買。權益、額度和地區資格以服務商實際規則為準。",
+        "description": "交付已開通 1 個月訂閱的成品帳號。",
+        "notice": "Google 反重力（Google Antigravity）需由買家自行驗證。",
         "features": [
-          "多模態創作",
-          "深度研究",
-          "Google AI 體驗",
-          "月度訂閱"
+          "Gemini Ultra 20X 月度訂閱",
+          "透過 iOS 管道開通，交付成品帳號"
         ]
       },
       "en": {
-        "name": "Gemini · Google AI Pro Membership",
-        "region": "Membership",
+        "name": "Gemini Ultra 20X (Ready-made Account via iOS)",
+        "region": "iOS channel",
         "duration": "1 month",
-        "description": "Gemini · Google AI Pro monthly membership for work, learning and creation. Orders open once pricing and delivery are confirmed.",
-        "notice": "Pricing and delivery are pending. Benefits, limits and regional eligibility follow the provider’s current terms.",
+        "description": "Receive a ready-made account with a one-month subscription already active.",
+        "notice": "Buyers must complete Google Antigravity verification themselves.",
         "features": [
-          "Multimodal creation",
-          "Deep research",
-          "Google AI experience",
-          "Monthly subscription"
+          "One-month Gemini Ultra 20X subscription",
+          "Ready-made account with a subscription activated through the iOS channel"
         ]
       }
     }

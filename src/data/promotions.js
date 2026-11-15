@@ -20,9 +20,9 @@ export const campaigns = [
   {
     id: 'gemini-membership', enabled: true, tone: 'gemini', brand: 'Gemini', productId: 'gemini-pro', href: '/products/gemini-pro',
     i18n: {
-      'zh-CN': { tag: 'GEMINI · GOOGLE AI PRO', title: '让好奇，走得更远。', description: '探索多模态创作与研究。Google AI Pro 月度方案，售价待定。', action: '查看 Gemini 方案' },
-      'zh-TW': { tag: 'GEMINI · GOOGLE AI PRO', title: '讓好奇，走得更遠。', description: '探索多模態創作與研究。Google AI Pro 月度方案，售價待定。', action: '查看 Gemini 方案' },
-      en: { tag: 'GEMINI · GOOGLE AI PRO', title: 'Take curiosity further.', description: 'Explore multimodal creation and research. Monthly Google AI Pro plan; pricing pending.', action: 'Explore Gemini' },
+      'zh-CN': { tag: 'GEMINI · 月度订阅', title: 'Gemini Ultra 20X', description: 'iOS 渠道成品号，谷歌反重力（Google Antigravity）需自行验证。', action: '查看 Gemini 方案' },
+      'zh-TW': { tag: 'GEMINI · 月度訂閱', title: 'Gemini Ultra 20X', description: 'iOS 管道成品帳號，Google 反重力（Google Antigravity）需自行驗證。', action: '查看 Gemini 方案' },
+      en: { tag: 'GEMINI · MONTHLY', title: 'Gemini Ultra 20X', description: 'Ready-made account activated through the iOS channel. Buyers must complete Google Antigravity verification themselves.', action: 'Explore Gemini' },
     },
   },
   {

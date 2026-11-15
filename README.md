@@ -14,6 +14,6 @@ npm run build
 
 图标直接来自品牌官方网站，原始来源记录在 `public/brands/sources.json`。图标保留官方颜色。
 
-ChatGPT Plus 售价 135 元，Claude Pro 售价 155 元。GPT Pro 100、200、500 额度和 Gemini（Google AI Pro）价格待定，暂不开放下单。
+商品价格与可购状态以商品中心为准。Gemini Ultra 20X（iOS 渠道成品号）售价 599 元，谷歌反重力（Google Antigravity）需自行验证。
 
 GitHub Pages 使用 `gh-pages` 分支根目录发布构建产物。站点为前端演示，提交订单不会真实扣款。

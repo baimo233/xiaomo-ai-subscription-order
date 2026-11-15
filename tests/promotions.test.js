@@ -21,6 +21,12 @@ test('Pro prices are available and no longer pending', () => {
     assert.equal(isPurchasable(product), true)
   }
 })
+test('Gemini Ultra 20X is available for 599 CNY', () => {
+  const product = getProduct('gemini-pro')
+  assert.equal(product.shortName, 'Gemini Ultra 20X')
+  assert.equal(isPurchasable(product), true)
+  assert.equal(getPricing(product).price, 599)
+})
 test('Annual China-time boundaries repeat across years and restore base prices', () => {
   for (const year of [2026, 2027, 2028]) {
     assert.equal(isCampaignActive(sale, at(`${year}-09-30T23:59:59+08:00`)), false)
@@ -38,7 +44,8 @@ test('Invalid discounts, disabled campaigns and unavailable items cannot reduce 
     assert.equal(getPricing(product, now, [{ ...sale, salePrices: { [product.id]: price } }]).price, 685)
   }
   assert.equal(getPricing(product, now, [{ ...sale, enabled: false }]).price, 685)
-  assert.equal(getPricing(getProduct('gemini-pro'), now, [{ ...sale, salePrices: { 'gemini-pro': 50 } }]).price, null)
+  const unavailable = { ...product, status: 'coming-soon', price: null }
+  assert.equal(getPricing(unavailable, now, [sale]).price, null)
 })
 test('Overlapping offers use the lowest price without stacking and preserve snapshot metadata', () => {
   const offer = getPricing(getProduct('chatgpt-pro-100'), at('2027-10-02T00:00:00+08:00'), [sale, { ...sale, id: 'lower', salePrices: { 'chatgpt-pro-100': 580.5 } }])
